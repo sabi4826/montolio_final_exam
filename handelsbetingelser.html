@@ -1,0 +1,329 @@
+<section data-bs-version="5.1" class="content15" group="Content" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Content Width" name="contentWidth" min="4" max="12" step="1" value="10">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons">
+        <input type="color" title="Wrap Bg" name="wrapBgColor" value="#0d2412">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png">
+            <input type="color" title="Color" value="#e1dabe" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="text" title="Fallback Image" name="videoToImageOnMobile" condition="overlay && bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#e1dabe" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.2" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}" video-to-image-on-mobile="{{videoToImageOnMobile}}">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-{{contentWidth}}">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title, .card-box"><b>Handelsbetingelser</b></h4>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Mont.Olio er skabt og drives af os, Christopher Dahl Jørgensen og Fie Dahl Bøgvad, igennem vores stiftede selskab med navnet:<br> <br><b>Passion First Business ApS med CVR-nr.: 43387480.<br></b><br>Vores forretning Mont.Olio sælger økologisk ekstra jomfru olivenolie og olivenolie med naturlige ingredienser fra Siena provinsen i Toscana, Italien. Medmindre andet er skriftligt aftalt, finder disse almindelige handelsbetingelser anvendelse for enhver leverance og ydelse fra os, som virksomhed, til en køber. <br><br>Vi tager forbehold for trykfejl, hjemmeside fejl, prisforhøjelser hos leverandørerne og ændringer i moms og/eller afgifter.<br></p>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons" data-toolbar="-mbrBtnMove">
+                            <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">Start
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content15" group="Content" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Content Width" name="contentWidth" min="4" max="12" step="1" value="10">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons">
+        <input type="color" title="Wrap Bg" name="wrapBgColor" value="#0d2412">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png">
+            <input type="color" title="Color" value="#e1dabe" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="text" title="Fallback Image" name="videoToImageOnMobile" condition="overlay && bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#e1dabe" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.2" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}" video-to-image-on-mobile="{{videoToImageOnMobile}}">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-{{contentWidth}}">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title, .card-box"><b>Bestilling, betaling og købsordrebekræftelse</b><br></h4>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Alle vores viste priser på hjemmesiden er inkl. moms og andre afgifter i danske kroner. Priserne er medmindre andre er nævnt på hjemmesiden eksklusiv fragt og andre ydelser. 
+<br><br>Vores varer og ydelser er fremstillet på baggrund af din ordre og på den måde øremærket særligt til dig. <br>Det gælder også bestilte og aftalte mad, vin og oliesmagninger. Dine bestilte varer leveres udført som den foreviste prøve på hjemmesiden. <br>Vi kan dog foretage uvæsentlige ændringer for at sikre varens funktion mv., forudsat at dette ikke forringer varens salgsværdi.
+<br><br>Du kan bestille varer fra sæsonens høst hos os via www.montolio.dk eller via skriftlig kontakt til os via email og sms. <br>Ved at bestille varer på www.montolio.dk eller direkte hos os, accepterer du vores priser samt handelsbetingelser. <br>Er du erhvervskunde så kontakt os for en B2B aftale. 
+<br><br>Vi planlægger kun med en enkelt leverance af varer fra Italien om året. Leverancen sker umiddelbart efter de specifikke oliven er modnet, høstet, presset og emballeret i Mont.Olio dåserne. Der vil til hver høst ikke blive produceret og lagerført varer i Danmark udover den samlede bestilte og forudbetalte mængde. Derfor er der følgende forløb og deadlines hvert år:
+<br><br>1.	Tilmeld dig evt. vores email liste og få en reminder inden sidste udkald for bestilling: 
+<br>Vi tæller ned til bestillingsdeadline for årets høst på vores hjemmeside hvert år. Det vil typisk være en dato i første halvdel af november måned.
+<br><br>2.	Bestil via bestillingsformularen på vores hjemmeside inden bestillingsdeadline:  
+<br>Bestillingsdeadline for det givne år vil blive kommunikeret på hjemmesiden og via email. Vi skal have modtaget alles bestillinger for høsten senest denne dato.
+<br><br>3.	Vi sender dig en faktura på email, som skal betales inden betalingsdeadline:
+<br>Se fakturaen igennem om den passer med din forventede bestilling. Hvis ikke, så skriv til os og få en ny faktura tilsendt. Hvis ja, så betal fakturaen inden vores betalingsdeadline. 
+<br>Bestillinger er bindende efter vores bestillingsdeadline for årets høst og kan normalt ikke ændres. Eventuelle ændringer i bestillinger efter den er indgivet er ikke gældende før skriftlig accept og bekræftelse fra os.
+<br>
+<br>4.	Når vi har modtaget din betaling på vores erhvervskonto bekræfter vi din købsordre:
+<br>For at du kan modtage dine bestilte varer, skal vi have modtaget betaling og bekræftet din købsordre inden betalingsdeadline. Bestillinger er kun bekræftede som ordrer, når fakturaen er betalt og betalingen er gået ind på vores Passion First Business ApS erhvervskonto i Lån &amp; Spar Bank. <br><br><b>Den har registrerings og kontonummer: 0400 - 4028953165</b><br><br>5.	Vi bekræfter fremstillingen af din Mont.Olio bestilling i høstugen, får den samlede leverance til Danmark, pakker dine varer til dig og giver dig besked om levering:
+<br>Vi bestræber os på at der fra vores betalingsdeadline til levering hos dig er mindre end 30 dage (med høsten, transporten til DK, ompakning og udsendelse derimellem). Se mere under levering og fragt.<br>
+<br>6.	Du modtager dine varer frisk fra høsten i Toscana. Buono appetito!
+<br><br>Vi håber du vil nyde dine friske varer og får et godt smagfuldt år indtil næste høst til næste år.
+<br>I tilfælde af at vi ikke kan levere bestillingen, som ønsket, vil vi enten foreslå et alternativ eller afslå din bestilling. <br>Hvis vi annullerer en købsordre, hvor din betaling er gået igennem, da vil vi refundere hele beløbet tilbage til din konto. <br>Vi forbeholder os retten til at annullere bestillinger og købsordre helt eller delvist ved leverandørsvigt. <br>Det kunne for eksempel være i forbindelse med transportør svigt fra Italien til Danmark eller dårlig høst for bønderne i Italien. <br>Det være sig også andre begivenheder, som forhindrer ordren. 
+<br><br>Manglende overholdelse af betalingsvilkår berettiger os til at standse leverancer og ydelser samt kræve ethvert eventuelt tilgodehavende, forfaldent som uforfaldent, indbetalt straks. For mad, vin og oliesmagninger gælder dette også allerede indkøbte varer og materialer, som går tabt i forbindelse med aflysning eller misligholdelse af aftale eller vilkår. <br>For hver udsendt rykkerskrivelse opkræves et rykkergebyr på 100,00 DKK.<br></p>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons" data-toolbar="-mbrBtnMove">
+                            <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">Start
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content15" group="Content" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Content Width" name="contentWidth" min="4" max="12" step="1" value="10">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons">
+        <input type="color" title="Wrap Bg" name="wrapBgColor" value="#0d2412">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png">
+            <input type="color" title="Color" value="#e1dabe" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="text" title="Fallback Image" name="videoToImageOnMobile" condition="overlay && bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#e1dabe" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.2" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}" video-to-image-on-mobile="{{videoToImageOnMobile}}">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-{{contentWidth}}">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title, .card-box"><b>Fortrydelsesret, returnering og reklamation&nbsp;</b></h4>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn"><br>Bestillinger er bindende efter vores bestillingsdeadline for årets høst og kan normalt ikke ændres. <br>Eventuelle ændringer i bestillinger efter den er indgivet er ikke gældende før skriftlig accept og bekræftelse fra os. <br>Købsordre er ligeledes bindende og varer kan derfor ikke ombyttes medmindre dette er skriftligt aftalt forud for leveringen. <br>Hvis bestillingen ønskes ændret inden bestillingsdeadline for årets høst og der ikke er betalt endnu, så skriv til os via vores kontaktformular på hjemmesiden omkring fakturanummer og ændringen.I de fleste tilfælde vil vi kunne tilpasse bestillingen til dit behov.
+<br><br>Når du handler på nettet, har du 14 dages fortrydelsesret. Vi tilbyder ikke returnering af enkelte dele af din ordre fordi du har fortrudt. <br>Din fortrydelsesfrist starter først, når du har modtaget varen, fx når den er lagt i din postkasse, når den efter aftale med dig er lagt i et skur eller lignende, eller når den er afleveret på din arbejdsplads. <br>Er varen lagt i en pakkeboks eller i en butik, hvor du skal afhente den, starter fortrydelsesfristen først, når du har afhentet den i pakkeboksen/butikken. <br>Henter du ikke pakken inden for fristen, vil pakken som regel blive returneret til os, og du skal selv betale for returforsendelsen. <br>Køber du en ydelse, løber fortrydelsesretten fra bestillingen. <br>Når du køber mad, billetter, flyrejser og nogle få andre ting, har du slet ikke fortrydelsesret. <br><br>Vi forbeholder os ret til at fratrække den del af dit køb, som udgør ydelsen i at fremstille din portion Mont.Olio varer og få dem til Danmark og leveret ud, fra refunderingen af købsbeløbet i tilfælde af fortrydelse efter betalingsdeadline (bekræftelse af produktionen i Toscana). <br>Hvis du vælger at fortryde dit køb, skal du sende varerne tilbage til os: 
+<br><br>Mont.Olio, Passion First Business ApS, c/o Christopher Dahl Jørgensen, Amagerfælledvej 118 6.mf, 2300 København
+<br><br>Du skal meddele os, at du fortryder inden udløbet af fristen. Herefter har du yderligere 14 dage til at returnere selve varen. <br>Hvis du bor i nærheden kan du også aftale med os at aflevere på adressen. Dog kun ved forudgående aftale. 
+<br>For at kunne udnytte fortrydelsesretten skal varen tilbageleveres i samme stand og mængde, som den er modtaget. <br>Produkterne skal være ubrugte og uåbnede. <br>Vi kan tilbyde dig en returnering af købssummen ved bankoverførsel til din konto. <br>Omkostninger i forbindelse med returnering afholdes af dig, hvis du har fortrudt dit køb. Varen skal emballeres forsvarligt, således at den ikke bliver beskadiget under fragten. 
+<br>Du har 2 års reklamationsret, hvis varen viser sig at have en fejl, der var til stede, eller hvor årsagen til fejlen var til stede, da du fik varen leveret. Dog ikke længere end til produktet er mærket til at holde ”Bedst før” datoen. Reklamationsfristen begynder at løbe den dag, du får varen leveret. <br><br>Vi forbeholder at der ved frisk olivenolie er en naturlig proces, hvor olivenolien selv i uåbnet emballage vil blive mindre frisk med tiden – også indenfor ”Bedst før” datoen. Varen vil derfor mindske sin værdi over tid i forhold til friskhed.
+<br><br>Bemærk at hvis du ikke har benyttet vores produkter korrekt eller acceptabelt i din anvendelse af dem, vil din reklamation ikke være berettiget. <br>Vi påser, at varerne er i aftalt stand og uden fejl ved levering. Såfremt der alligevel konstateres fejl eller mangler skal dette meddeles os inden 10 dage fra modtagelsen. 
+<br>Opstår der senere fejl ved leverede varer, og ønskes disse gjort gældende over for os, skal disse straks meddeles til os. <br>Vi afgør, hvorledes sagen skal behandles. <br>Du har ikke ret til at returnere varen uden først at træffe aftale med os herom. Returfragt krediteres ikke.&nbsp;<br></p>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons" data-toolbar="-mbrBtnMove">
+                            <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">Start
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content15" group="Content" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Content Width" name="contentWidth" min="4" max="12" step="1" value="10">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons">
+        <input type="color" title="Wrap Bg" name="wrapBgColor" value="#0d2412">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png">
+            <input type="color" title="Color" value="#e1dabe" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="text" title="Fallback Image" name="videoToImageOnMobile" condition="overlay && bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#e1dabe" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.2" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}" video-to-image-on-mobile="{{videoToImageOnMobile}}">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-{{contentWidth}}">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title, .card-box"><b>Levering og fragt</b></h4>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Vi leverer kun til adresser i Danmark og indenfor GLS’ leveringsnetværk og standardpriser. <br>På alle ordrer tillægges fragtomkostning, som beskrevet på hjemmesiden og ved bestillingsformularen. <br>Hvis du har specielle ønsker til din bestilling såsom gaveæsker, julegaveindpakning eller lignende, så send en forespørgsel med dit ønske til os i din bestilling og vi vender retur til dig med muligheder og priser.
+<br><br>Der er mulighed for at vælge afhentning på vores adresse ved forudgående aftale, levering til pakkeshop via GLS/DAO og levering til døren enten via GLS/DAO eller direkte af os selv. 
+<br><br>Udlevering til døren direkte af os selv vil kun være som led i en udleveringsrunde i udvalgte postnumre omkring København. <br>Det betyder at vi efter modtagelse af alle produkterne fra Italien udvælger et par datoer, hvor vi kører ud i aftentimerne og leverer til dig på din adresse. <br>Du vil få besked på forhånd omkring leveringstidspunktet. <br>Hvis du ikke er hjemme vil din forsendelseskasse blive sat foran din hoveddør eller taget med igen og sendt til pakkeshop. 
+<br><br>Ved levering via DAO vil det typisk være bestillinger under 2 kg leveret direkte til døren, så pakken ankommer med uddelingen af reklamerne om morgenen lige til hoveddøren.
+<br><br>Ved levering via GLS gælder også transportydelsesvilkår i henhold til GLS’ vilkår, som følger: <br>På mindre ø’er kan forekomme særaftaler om levering. <br>GLS forbeholder sig ret til at levere til en anden PakkeShop end den af kunden valgte. Returnering, genlevering, alternativ levering og omadressering af pakken vil medføre en ekstra omkostning.
+<br><br>Pakker kan kun udleveres ved henstilling på et nærmere angivet sted efter skriftlig aftale herom mellem GLS og hhv. modtager (fuldmagt). <br>GLS betragter pakken som korrekt leveret, når pakken er henstillet på det aftalte sted. <br>GLS kan levere til enhver person på modtageradressen. Det er modtagers eget ansvar at viderebringe til en evt. att. person. <br>Hvis GLS ikke træffer nogen på modtageradressen, indleverer GLS pakken i en GLS PakkeShop eller på et GLS depot. <br>Modtager får information om dette. Efter 7 kalenderdage returnerer GLS pakken til afsender.
+<br><br>Fra din ordre er bekræftet af os, når fakturaen er betalt og betalingen er gået ind på vores konto, efter vores bestillingsdeadline for årets høst, vil vi leverer din ordre indenfor 30 dage. <br>Leveringstider er omtrentlige og der vil blive informeret omkring leveringsdatoen på forhånd. <br>Der forbeholdes ret til dellevering.
+<br><br>Ved force majeure af enhver art er vi kun forpligtet til at levere bedst muligt. <br>I sådanne tilfælde har vi ret til at annullere leveringen eller hvis en senere dato er mulig og acceptabel, at aftale en udskydelse af leveringstiden med dig. Vi er i sådanne tilfælde pligtig til at underrette dig.
+<br><br>Du overtager ansvaret for varen, når den er leveret til dig. Skal du returnere et køb, er det dit ansvar, hvis varen forsvinder eller går i stykker under transporten tilbage til os. Forsvinder varen, fordi du har handlet uagtsomt, mister du retten til tilbagebetaling af købesummen.&nbsp;&nbsp;<br></p>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons" data-toolbar="-mbrBtnMove">
+                            <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">Start
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content15" group="Content" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Content Width" name="contentWidth" min="4" max="12" step="1" value="10">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons">
+        <input type="color" title="Wrap Bg" name="wrapBgColor" value="#0d2412">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png">
+            <input type="color" title="Color" value="#e1dabe" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="text" title="Fallback Image" name="videoToImageOnMobile" condition="overlay && bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#e1dabe" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.2" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}" video-to-image-on-mobile="{{videoToImageOnMobile}}">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-{{contentWidth}}">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title, .card-box"><b>Ejendomsret, ansvar og klageadgang</b></h4>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Vi forbeholder os ejendomsretten til alle vores varer indtil leveringen har fundet sted. <br>Risikoen for bortkomst eller beskadigelse tilfalder derfor os indtil leveringstidspunktet.
+<br>Vi kan i intet tilfælde gøres ansvarlig for tab eller følgeskader, hverken direkte eller indirekte, såsom krav fra tredjemand, avancetab og uagtsomme eller kriminelle handlinger af andre.
+<br><br>Du er forpligtet til skriftligt at meddele os, såfremt der er opstået en produktansvarsskade, eller at der er fare for, at en sådan skade vil indtræde. Det skal meddeles os uden ugrundet ophold.
+<br>Hvis der opstår et problem med den vare eller ydelse, du har købt, skal du først sende en skriftlig klage til os, før du kan gå videre med en klagesag hos Mæglingsteamet for Forbrugerklager eller et godkendt ankenævn. <br>Du skal klage direkte til os, som du har købt varen hos, og ikke til producenten eller andre instanser. <br>Udfyld en mail så kort og præcist som muligt og gem dokumentation for din klage. 
+<br><br>Vær gerne åben for forskellige muligheder, og at vi finder den løsning, der passer begge parter bedst. <br>Et problem kan ofte løses på forskellig vis. Hvis vi ikke kan afgøre det selv i mindelighed, skal det afgøres under anvendelse af dansk ret ved vores værneting. <br><br>Dansk international privatret, der henviser til fremmed ret, samt Den Internationale Købelov (CISG) finder dog ikke anvendelse.&nbsp;&nbsp;<br></p>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons" data-toolbar="-mbrBtnMove">
+                            <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">Start
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content15" group="Content" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Content Width" name="contentWidth" min="4" max="12" step="1" value="10">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons">
+        <input type="color" title="Wrap Bg" name="wrapBgColor" value="#0d2412">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png">
+            <input type="color" title="Color" value="#e1dabe" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="text" title="Fallback Image" name="videoToImageOnMobile" condition="overlay && bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#e1dabe" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.2" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}" video-to-image-on-mobile="{{videoToImageOnMobile}}">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-{{contentWidth}}">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title, .card-box"><b>Cookie og persondata politik</b></h4>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Vi benytter os hverken af cookies eller tracking teknologi på din færd på vores hjemmeside eller dine køb. <br>Derfor har vi heller ikke funktioner på hjemmesiden til at huske dit køb eller beskeder på baggrund af din aktivitet. 
+<br><br>For at kunne modtage din bestilling, bekræfte din ordre og leverer varerne til dig behøver vi dit navn, adresse, postnummer, by, telefonnummer og e-mail adresse. <br>Det er for at kunne adressere leverancen til dig, evt. via en transportør (såsom GLS eller DAO), og for at kontakte dig vedrørende din ordre. <br>Vi tilbyder kun betaling med bankoverførsel eller mobilepay overførsel til vores erhvervskonto. <br>Derfor behøver vi ikke kende til dine betalingsoplysninger. 
+<br><br>Vi registrerer heller ingen yderligere personfølsomme oplysninger. <br>Dine oplysninger vil udelukkende blive brugt til at håndtere din bestilling med relevante samarbejdspartnere med henblik for at gennemføre din ordre, fx et fragtselskab. <br>Alle registrerede oplysninger bruges alene af os og sælges på ingen måde videre til tredjemand eller kan bruges af andre parter end os og dig selv, medmindre der er bestilt fragt hos en samarbejdspartner (GLS eller DAO). 
+<br><br>Vi opbevarer dine kundeoplysninger hos os i 5 år, da det er et krav i forhold til bogføringsloven. <br>Den dataansvarlige i Mont.Olio (Passion First Business ApS) er Christopher Dahl Jørgensen.
+<br><br>Hvis du tilmelder dig vores e-mail liste giver du samtykke til at vi kan sende dig nyheder, markedsføring og vigtig information om sæsonens høst. Du kan til enhver tid afmelde nyhedsbrevet ved at kontakte os.&nbsp;<br></p>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons" data-toolbar="-mbrBtnMove">
+                            <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">Start
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

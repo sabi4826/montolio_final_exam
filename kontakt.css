@@ -1,0 +1,176 @@
+/* CONTACT FORM */
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+.mbr-overlay {
+  background-color: @overlayColor;
+  opacity: @overlayOpacity;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+textarea {
+  min-height: 200px;
+}
+.btn {
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+}
+& when (@customStyle) {
+  .form-control,
+  .field-input {
+    padding: 1.2rem 1.6rem;
+    background-color: @fieldColor;
+    border-color: @borderColor;
+    color: @formText;
+    transition: 0.4s;
+    box-shadow: none;
+    border-radius: 1rem;
+    outline: none;
+    &::-webkit-input-placeholder,
+    &::-webkit-input-placeholder {
+      color: @formPlaceholder;
+    }
+    &:-moz-placeholder,
+    &:-moz-placeholder {
+      color: @formPlaceholder;
+    }
+    &:hover,
+    &:focus {
+      background-color: @fieldHover;
+      border-color: @borderHover !important;
+      color: @formFocusText;
+      box-shadow: none;
+      outline: none;
+      &::-webkit-input-placeholder,
+      &::-webkit-input-placeholder {
+        color: @formFocusPlaceholder;
+      }
+      &:-moz-placeholder,
+      &:-moz-placeholder {
+        color: @formFocusPlaceholder;
+      }
+    }
+  }
+  .jq-number__spin:hover,
+  .jq-number__spin:focus {
+    background-color: @fieldHover;
+    border-color: @borderHover !important;
+    color: contrast(@formText, #000000, #ffffff, 30%);
+    box-shadow: none;
+    outline: none;
+  }
+  .jq-number__spin {
+    background-color: @fieldColor;
+    border-color: @borderColor;
+    color: @formText;
+    transition: 0.4s;
+    box-shadow: none;
+    outline: none;
+  }
+  .jq-selectbox li,
+  .jq-selectbox li {
+    background-color: @fieldColor;
+    color: contrast(@fieldColor, #000000, #ffffff, 30%);
+  }
+  .jq-selectbox li:hover,
+  .jq-selectbox li.selected {
+    background-color: @fieldHover;
+    color: contrast(@fieldHover, #000000, #ffffff, 30%);
+  }
+  .jq-selectbox:hover .jq-selectbox__trigger-arrow,
+  .jq-number__spin.minus:hover:after,
+  .jq-number__spin.plus:hover:after {
+    border-top-color: @fieldColor;
+    border-bottom-color: @fieldColor;
+  }
+  .jq-selectbox .jq-selectbox__trigger-arrow,
+  .jq-number__spin.minus:after,
+  .jq-number__spin.plus:after {
+    border-top-color: @fieldHover;
+    border-bottom-color: @fieldHover;
+  }
+}
+& when (@customStyle), (@disableElements) {
+  input::-webkit-clear-button {
+    display: none;
+  }
+  input::-webkit-inner-spin-button {
+    display: none;
+  }
+  input::-webkit-outer-spin-button {
+    display: none;
+  }
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+.mbr-section-title {
+  color: #e6ddc3;
+  text-align: center;
+}
+.contact_p {
+  font-size: 1.5rem;
+  font-weight: semi-bold;
+  line-height: 1.6;
+  color: #e6ddc3;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.contact-label {
+  font-size: 1.2rem;
+  font-weight: semi-bold;
+  color: #e6ddc3;
+}
+label {
+  color: #e6ddc3;
+}
+.submit-button {
+  color: #e6ddc3;
+}
+
+/* NEWSLETTER SIGNUP SECTION */
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+.mbr-overlay {
+  background-color: @overlayColor;
+  opacity: @overlayOpacity;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+form.mbr-form {
+  border-radius: 10px;
+  background-color: #0e6b38;
+  @media (min-width: 992px) {
+    padding: 2rem;
+  }
+  @media (max-width: 991px) {
+    padding: 1rem;
+  }
+  .mbr-section-btn {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    .btn {
+      width: 100%;
+      height: 100%;
+      color: #0d2412 !important;
+    }
+  }
+}
+.mbr-section-title {
+  color: #e6ddc3;
+  text-align: center;
+}
+.mbr-section-subtitle {
+  color: #e6ddc3;
+  text-align: center;
+}
+label {
+  color: #e6ddc3;
+}

@@ -1,0 +1,60 @@
+<section data-bs-version="5.1" class="features11" group="Features" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}" plugins="mobirise-icons2">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="6">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="6">
+        <input type="range" name="imageWidth" title="Image" min="4" max="8" step="1" value="6">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Items" name="showLink" checked>
+        <input type="checkbox" title="Buttons" name="showButtons" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-5.png" parallax selected>
+            <input type="color" title="Color" value="#ffffff">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="text" title="Fallback Image" name="videoToImageOnMobile" condition="overlay && bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.3" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth}" video-to-image-on-mobile="{{videoToImageOnMobile}}">
+        <div class="m-0 row align-items-center">
+            <div class="col-12 col-lg" mbr-class="{'offset-lg-1': fullWidth}">
+                <div class="card-wrapper">
+                    <div class="card-box">
+                        <h4 class="card-title mbr-fonts-style mb-4" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title, .card-box"><b>Økologisk ekstra jomfruolivenolie</b><br><b>fra Andrea&nbsp;</b></h4>
+                        <p class="mbr-text mbr-fonts-style mb-4" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .link-wrap, .mbr-section-btn">Mild økologisk ekstra jomfruolivenolie fra den italienske bonde Andrea.<br>Vores olivenolie "Andrea" er mild, frisk og intens  i smagen. "Andrea" indeholder de fire traditionelle olivensorter fra Toscana: Leccino, Pendolino, Frantoio og Moraiolo.<br><br>Med dens friskhed er den perfekt som smagsforstærker i en god salat, pastaret, ovnbagt ret,&nbsp;på en fed fisk eller bare med et lækkert brød og lidt salt. "Andrea" olivenolien indeholder 500 ml.&nbsp;<br></p>
+                        <div class="mbr-text mbr-fonts-style counter-container" mbr-theme-style="display-7" mbr-if="showLink" data-app-selector=".mbr-text" data-multiline mbr-article>
+                            <ul><li>Frisk fra bonden</li>
+                                <li>Økologisk</li>
+                                <li>Høstet i de toscanske bakker&nbsp;<span style="font-size: 1.2rem;">&nbsp; &nbsp;&nbsp;</span></li></ul><p><b><i>DKK 145,00</i></b></p><p><br></p><p class="mbr-text mbr-fonts-style mb-4" mbr-theme-style="display-7">Køb olivenolien i dag - som forkælelsesgave til dig selv&nbsp;<span style="font-size: 1.2rem;">eller som den perfekte værtindegave.</span></p><p><b><i>
+</i></b></p><p><b>
+</b></p><p><b>
+</b></p><p><b>
+</b></p><p><b>
+</b></p><p><b>
+</b></p><p><b>
+</b></p><p><b>
+</b></p><p><b>
+</b></p><ul>
+                            </ul>
+                        </div>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mb-4" mbr-if="showButtons" data-toolbar="-mbrBtnMove"><a class="btn btn-success" href="produkter.html#formbuilder-8e" data-app-placeholder="Type Text">Bestil her</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-0 col-12 col-lg-{{imageWidth}} md-pb">
+                <div class="image-wrapper">
+                    <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img111-1-1288x1221.png" alt="Mont.Olio olivenolie ">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

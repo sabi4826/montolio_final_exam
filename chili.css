@@ -1,0 +1,32 @@
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+.card-wrapper {
+  padding-right: 2rem;
+}
+@media (max-width: 992px) {
+  .card {
+    margin-bottom: 2rem !important;
+  }
+  .card-wrapper {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .link-wrap {
+    align-items: center;
+  }
+}
+.image-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+.card-title,
+.card-box {
+  color: #e1dabe;
+}

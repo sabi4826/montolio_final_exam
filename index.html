@@ -1,0 +1,559 @@
+<!-- MENU AND FOOTER ONLY ADDED TO THIS INDEX FILE -->
+
+<!-- MENU -->
+<section data-bs-version="5.1" class="menu menu2" group="Menu" plugins="DropDown, TouchSwipe" always-top global once="menu" not-draggable position-absolute>
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" name="fullWidth" title="Full Width" checked>
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Logo" name="showLogo" checked>
+        <input type="range" title="Logo Size" inline name="logoSize" min="3" max="8" step="0.1" value="3" condition="showLogo">
+        <input type="checkbox" title="Brand Name" name="showBrand">
+        <input type="checkbox" title="Menu Items" name="showItems" checked>
+        <input type="checkbox" title="Icons" name="showIcons" checked>
+        <select title="Amount" name="iconsAmount" condition="showIcons">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <input type="color" title="Icons Color" name="iconsColor" value="#000000" condition="showIcons">
+        <input type="checkbox" title="Button" name="showButtons" checked>
+        <header>Styles</header>
+        <input type="checkbox" title="Sticky" name="sticky" checked>
+        <input type="checkbox" title="Collapsed" name="collapsed">
+        <input type="checkbox" title="Transparent" name="transparent">
+        <input type="range" title="Opacity" name="opacity" min="0" max="1" step="0.1" value="0.2" condition="transparent">
+        <input type="color" title="Color" name="menuBgColor" value="#0d2412">
+        <input type="color" title="Hamburger" name="hamburgerColor" value="#e1dabe">
+    </mbr-parameters>
+    <nav class="navbar navbar-dropdown" mbr-class="{'navbar-fixed-top':sticky,
+                    'navbar-expand-lg':!collapsed,
+                    'collapsed':collapsed}">
+        <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+            <div class="navbar-brand">
+                <span mbr-if="showLogo" class="navbar-logo">
+                    <a href="index.html">
+                        <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/logo-ny.png" alt="Mont.Olio logo" mbr-style="{'height': logoSize + 'rem'}">
+                    </a>
+                </span>
+                <span mbr-if="showBrand" mbr-buttons mbr-theme-style="display-7" class="navbar-caption-wrap" data-toolbar="-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,-iconFont"><a class="navbar-caption text-black" data-app-selector=".navbar-caption" href="https://mobiri.se" data-app-placeholder="Type Text">Mobirise</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" mbr-if="showItems || showIcons || showButtons">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" mbr-if="showItems || showIcons || showButtons">
+                <ul mbr-menu class="navbar-nav nav-dropdown" mbr-theme-style="display-4" mbr-if="showItems" mbr-class="{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}"><li class="nav-item"><a class="nav-link link text-secondary text-primary" href="produkter.html" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text">Produkter</a></li>
+                    <li class="nav-item"><a class="nav-link link text-secondary text-primary" href="smag.html" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text">Smag Mont.Olio</a>
+                    </li><li class="nav-item"><a class="nav-link link text-secondary text-primary" href="omos.html" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text">Om os</a></li><li class="nav-item"><a class="nav-link link text-secondary text-primary" href="kontakt.html" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text">Kontakt</a></li></ul>
+                <div class="icons-menu" mbr-if="showIcons">
+                    <a class="iconfont-wrapper" href="https://www.instagram.com/mont.olio/" target="_blank">
+                        <span mbr-icon class="p-2 mbr-iconfont socicon-instagram socicon" style="color: rgb(143, 65, 8); fill: rgb(143, 65, 8);"></span>
+                    </a>
+                    <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank" mbr-if="iconsAmount > 1">
+                        <span mbr-icon class="p-2 mbr-iconfont socicon-twitter socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank" mbr-if="iconsAmount > 2">
+                        <span mbr-icon class="p-2 mbr-iconfont socicon-instagram socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank" mbr-if="iconsAmount > 3">
+                        <span mbr-icon class="p-2 mbr-iconfont socicon-linkedin socicon"></span>
+                    </a>
+                </div>
+                <div mbr-if="showButtons" mbr-buttons mbr-theme-style="display-4" class="navbar-buttons mbr-section-btn"><a class="btn btn-success" href="produkter.html#formbuilder-8e" data-app-placeholder="Type Text">Bestil nu</a></div>
+            </div>
+        </div>
+    </nav>
+</section>
+<!-- HERO -->
+<section data-bs-version="5.1" class="header1" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="6" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="9" condition="fullScreen == false">
+
+        <input type="range" inline name="textWidth" title="Width" min="4" max="12" value="7" step="1">
+        <select title="Align" name="contentAlign">
+            <option value selected>Left</option>
+            <option value="justify-content-center">Center</option>
+            <option value="justify-content-end">Right</option>
+        </select>
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Subtitle" name="showSubitle">
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/mont.olio2-1.png" selected parallax>
+            <input type="color" title="Color" value="#fafafa">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.1" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+    <div class mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row {{contentAlign}}">
+            <div class="col-12 col-lg-{{textWidth}} align-left">
+                <h2 class="mbr-section-subtitle mbr-white mbr-fonts-style mb-3" data-app-selector=".mbr-section-subtitle" mbr-theme-style="display-7" mbr-if="showSubitle">
+                    <b>Welcome to our company</b>
+                </h2>
+                <h1 class="mbr-section-title mbr-white mbr-fonts-style mb-4" data-app-selector=".mbr-section-title" mbr-theme-style="display-1" mbr-if="showTitle"><b>Økologisk ekstra jomfru</b><b>olivenolie&nbsp;</b><br><b>- frisk fra bonden</b></h1>
+                <p class="mbr-text mbr-semibold mbr-fonts-style mb-4" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Har du nogensinde smagt olivenolie direkte fra høst?<br><br>Frisk olivenolie fra den årlige høst i Toscana&nbsp;smager himmelsk.<br>Hos Mont.Olio får du olivenolie frisk fra høsten én gang om året <br>- direkte fra bønderne Andrea og Giorgio i Toscana.</p>
+                <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons"><a class="btn btn-lg btn-success" href="produkter.html" data-app-placeholder="Type Text">Se vores produkter</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KONCEPT SECTION -->
+<section data-bs-version="5.1" class="features8" group="Features" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="5">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showMainTitle" checked>
+        <input type="checkbox" title="Subtitle" name="showMainSubtitle" checked>
+        <header>Card</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons" checked>
+        <select title="Cards" name="cardsAmount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+        </select>
+        <header>Color</header>
+        <input type="color" title="Card" name="cardBg" value="#0d2412" selected>
+        <input type="color" title="Card Hover" name="cardHover" value="#0d2412" selected>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/53-4.png" parallax selected>
+            <input type="color" title="Color" value="#0d6133">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#0e6b38" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.8" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12 pb-5" mbr-if="showMainTitle || showMainSubtitle">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0" mbr-theme-style="display-2" mbr-if="showMainTitle" data-app-selector=".mbr-section-title"><b>Sådan fungerer det</b></h3>
+                <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 koncept_section" mbr-theme-style="display-7" mbr-if="showMainSubtitle" data-app-selector=".mbr-section-subtitle">Oliven er en frugt, som modnes med solen og klimaet. Den høstes én gang om året i efteråret. Selvom olivenolie kan holde længe, så holder friskheden og den naturlige smag sig ikke. Selv ikke i en uåbnet emballage.&nbsp;Den bedste - friske - olivenolie er derfor en sæsonvare. Olivenbønderne anbefaler at spise olivenolien frisk og indenfor et år inden den næste høst.<br><br><div><b>Vi leverer derfor frisk høj kvalitets Mont.Olio direkte til dig - én gang om året:</b></div> </h5>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card col-12 col-md-6 col-lg-4 md-pb">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+
+
+                        <h5 class="card-title mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".card-title, .iconfont-wrapper"><b>1. BESTILLING</b></h5>
+                        <p class="card-text mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".card-text, .mbr-section-btn">Du vælger mængden og bestiller inden bestillingsdeadline hvert år (uge 45 i 2023). Vi reserverer den samlede mængde hos vores to bønder, Andrea og Giorgio.<br><br></p>
+
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3 concept-card-button" mbr-if="showButtons"><a class="btn btn-success" href="produkter.html" data-app-placeholder="Type Text">Se olierne</a></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 md-pb" mbr-if="cardsAmount > 1">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+
+                        <h5 class="card-title mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".card-title, .iconfont-wrapper"><b>2. DE HØSTER I TOSCANA</b></h5>
+                        <p class="card-text mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".card-text, .mbr-section-btn">Bønderne høster deres oliven, udvinder den lækre olivenolie og pakker den til dig. Vi sørger for én samlet forsendelse til Danmark og pakker dine olier til dig.<br><br></p>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons"><a class="btn btn-success" href="https://www.instagram.com/mont.olio/" data-app-placeholder="Type Text" target="_blank">Se billeder</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 md-pb" mbr-if="cardsAmount > 2">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+
+                        <h5 class="card-title mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".card-title, .iconfont-wrapper"><b>3. NYDELSE TIL DIG</b></h5>
+                        <p class="card-text mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".card-text, .mbr-section-btn">Du får leveret den lækre Mont.Olio olivenolie fra vores to bønder, Andrea og Giorgio, kort tid efter høsten, og du kan nyde olierne hele året indtil næste høst.<br><br></p>
+                        <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons"><a class="btn btn-success" href="produkter.html#formbuilder-8e" data-app-placeholder="Type Text">Bestil nu</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PHOTO SECTION -->
+<section data-bs-version="5.1" class="image2" group="Images & Videos" mbr-class="{'mbr-parallax-background':bg.parallax}" data-bg-video="{{bg.type == 'video' && bg.value.url}}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="8">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Width" name="contentWidth" min="6" max="12" value="12" step="1">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Description" name="showDescription" checked>
+        <input type="range" inline title="Images" name="item" min="1" max="3" value="3" step="1">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/background1-1.jpg">
+            <input type="color" title="Color" value="#9e6227" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/background1-1.jpg" name="fallBackImage" condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.4" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12 col-md-{{contentWidth}}">
+                <div class="row">
+                    <div class="col-12 col-lg-4" mbr-if="item > 2">
+                        <div class="img-item mb-3">
+                            <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/burrata-9.png" alt="Mont.Olio billede af oliven">
+                            <p class="mbr-fonts-style align-center mt-2" mbr-theme-style="display-7" mbr-if="showDescription">Mont.Olio-olierne er perfekte til italiensk madlavning!</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4" mbr-if="item > 1">
+                        <div class="img-item mb-3">
+                            <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/25-6.png" alt="Mont.Olio billede af oliven">
+                            <p class="mbr-fonts-style align-center mt-2" mbr-theme-style="display-7" mbr-if="showDescription">Olierne er lavet på oliven fra Toscana, Italien.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="img-item mb-3">
+                            <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/63-2.png" alt="Mont.Olio billede af pastaret">
+                            <p class="mbr-fonts-style align-center mt-2" mbr-theme-style="display-7" mbr-if="showDescription">Olierne er fulde af smagen af Italien.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT IS GOOD OLIVE OIL SECTION -->
+<section data-bs-version="5.1" class="header1 woodm4_header1" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <!-- Block parameters controls (Blue "Gear" panel) -->
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="4" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="4" condition="fullScreen == false">
+        <input type="checkbox" title="Show Arrow" name="showArrow">
+        <input type="checkbox" title="Show Title" name="showTitle" checked>
+        <input type="checkbox" title="Show Subtitle" name="showSubTitle">
+        <input type="checkbox" title="Show Text" name="showText" checked>
+        <input type="checkbox" title="Show Buttons" name="showButtons" checked>
+
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/53-1.png" selected parallax>
+            <input type="color" title="Background Color" value="#073B4C">
+            <input type="video" title="Background Video" value="https://www.youtube.com/watch?v=36YgDDJ7XSc">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.6" condition="overlay && bg.type !== 'color'">
+        <!-- End block parameters -->
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+
+    <div class="container">
+        <div class="row justify-content-md-end">
+            <div class="mbr-white col-lg-6 col-md-12">
+                <h1 class="mbr-section-title align-left mbr-bold pb-4 mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle">
+
+                    <div>
+                    </div>
+                    <div>Hvad er god velsmagende kvalitets olivenolie?&nbsp;&nbsp;</div>
+                </h1>
+                <h3 class="mbr-section-subtitle align-left mbr-light pb-4 mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showSubTitle">
+                    Beautiful mobile websites
+                </h3>
+                <p class="mbr-text pb-4 align-left mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Du har nok prøvet at stå nede i supermarkedet og vælge en olivenolie. <br>Skal den være jomfru, ekstra jomfru, koldpresset? Hvilken er den bedste? Det er svært at finde rundt i og måske ender du med en økologisk ekstra jomfruolivenolie, for så er det jo den bedste kvalitet... Eller er det?&nbsp;&nbsp;<br><br>De lokale italienere ved udmærket, at det ikke kun er kvalitetsniveaet, men også friskheden, som får deres olivenolie til at smage fantastisk. De ved, at oliven er frugter, og olie lavet på oliven smager bedst, når den er god og frisk. De skaffer sig derfor en portion frisk fra høsten og laver dejlig smagfuld italiensk mad hele året&nbsp;indtil næste høst.<br><br>Du kan gøre det samme, for vi importerer økologisk olivenolie fra Toscana til Danmark lige efter høsten i efteråret. Frisk olivenolie er kraftig og intens i smagen, og har du først smagt frisk olivenolie, er det svært at gå tilbage til en olie fra supermarkedet.<br></p>
+                <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons" data-toolbar="-mbrBtnMove"><a class="btn btn-md btn-success" href="smag.html" data-app-placeholder="Type Text" target="_blank">Smag Mont.Olio</a></div>
+            </div>
+        </div>
+    </div>
+    <div mbr-if="showArrow" class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
+</section>
+
+<!-- HARVEST COUNT DOWN SECTION -->
+<section data-bs-version="5.1" class="countdown1" group="Countdowns" plugins="formstyler, datepicker" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+<mbr-parameters>
+    <header>Size</header>
+    <input type="checkbox" title="Full Screen" name="fullScreen">
+    <input type="checkbox" title="Full Width" name="fullWidth">
+    <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="3" condition="fullScreen == false">
+    <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="0" condition="fullScreen == false">
+    <header>Show/Hide</header>
+    <input type="checkbox" title="Title" name="showTitle" checked>
+    <input type="checkbox" title="Subtitle" name="showSubtitle" checked>
+    <input type="checkbox" title="Text" name="showText">
+    <header>Settings</header>
+    <input type="text" title="Countdown" name="countdown" value="2023/11/10">
+    <input type="text" inline title="Days" name="daysCountdown" value="Dage">
+    <input type="text" inline title="Hours" name="hoursCountdown" value="Timer">
+    <input type="text" inline title="Minutes" name="minutesCountdown" value="Minutter">
+    <input type="text" inline title="Seconds" name="secondsCountdown" value="Sekunder">
+    <input type="color" title="Numbers Color" name="numbersColor" value="#e6ddc3">
+    <input type="color" title="Labels Color" name="labelsColor" value="#e6ddc3">
+    <header>Background</header>
+    <fieldset type="background" name="bg" parallax>
+        <input type="image" title="Image" value="../_images/background1.jpg">
+        <input type="color" title="Color" value="#0e6b38" selected>
+        <input type="video" title="Video" value="https://vimeo.com/428046504">
+    </fieldset>
+    <input type="text" title="Fallback Image" name="videoToImageOnMobile" condition="overlay && bg.type === 'video'">
+    <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+    <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay && bg.type !== 'color'">
+    <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7" condition="overlay && bg.type !== 'color'">
+<input type="hidden" name="usedRecaptcha" value="false"></mbr-parameters>
+<div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+</div>
+<div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}" video-to-image-on-mobile="{{videoToImageOnMobile}}">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h3 class="mbr-section-title mb-5 align-center mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle"><b>Vi tæller ned til høsten for dig</b><br></h3>
+            <h4 class="mbr-section-subtitle mb-5 align-center mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showSubtitle" data-app-selector=".mbr-section-subtitle"><b>&nbsp;| Bestillingsdeadline er i uge 45 2023 |</b><b><br></b><br>Vil du kontaktes, inden den friske olivenolie er høstet og kommer til Danmark? <br>Giv os din e-mail, så giver vi dig besked inden sidste udkald for bestilling.</h4>
+            <div class="countdown-cont align-center mb-5">
+                <div title="{{daysCountdown}}" class="daysCountdown col-xs-3 col-sm-3 col-md-3"></div>
+                <div title="{{hoursCountdown}}" class="hoursCountdown col-xs-3 col-sm-3 col-md-3"></div>
+                <div title="{{minutesCountdown}}" class="minutesCountdown col-xs-3 col-sm-3 col-md-3"></div>
+                <div title="{{secondsCountdown}}" class="secondsCountdown col-xs-3 col-sm-3 col-md-3"></div>
+                <div class="countdown" data-due-date="{{countdown}}"></div>
+            </div>
+            <p class="mbr-text mb-5 align-center mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text">
+                Subscribe to find out when we launch.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div mbr-form class="col-lg-4 mx-auto mbr-form">
+<!--Formbuilder Form-->
+<form action="sabineov@gmail.com" name="Form Name" method="POST" class="mbr-form form-with-styler" data-verified="sabineov@gmail.com">
+<div class="row">
+<div hidden="hidden" data-form-alert class="alert alert-success col-12">Tak for din registrering!
+Vi tæller ned...
+- og du hører fra os, når vi tager imod bestillinger.</div>
+<div hidden="hidden" data-form-alert-danger class="alert alert-danger col-12">Hov, der opstod et problem. Prøv igen, eller skriv direkte til fieboegvad@gmail.com og bliv skrevet op.</div>
+</div>
+<div class="dragArea row">
+<div class="col form-group" data-for="email">
+<input type="text" name="email" placeholder="Email" data-form-field="email" mbr-theme-style="display-7" required="required" class="form-control" value>
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12 mbr-section-btn" mbr-buttons="true" mbr-theme-style="display-7" data-toolbar="-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd"><a type="submit" class="w-100 w-100 btn btn-warning" data-app-placeholder="Type Text">Send</a></div>
+</div>
+</form><!--Formbuilder Form-->
+</div>
+    </div>
+</div>
+</section>
+
+<!-- OUT OIL COMES FROM SECTION -->
+<section data-bs-version="5.1" class="header14" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="0" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="2" condition="fullScreen == false">
+        <input type="range" inline name="imageWidth" title="Image" min="4" max="8" step="1" value="5">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Remove Padding" name="imageFullWidth" condition="fullWidth">
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Button" name="showButtons" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/14-1.png" selected parallax>
+            <input type="color" title="Color" value="#deddc4">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.3" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12 col-lg mt-5 py-5 mt-lg-0 pt-lg-0">
+                <div class="text-wrapper">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-4" data-app-selector=".mbr-section-title" mbr-theme-style="display-2" mbr-if="showTitle"><b>
+                        Hvor kommer vores olivenolie fra?</b></h1>
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Vores olivenolie er nøje udvalgt fra de toscanske bakker i Italien. Helt nøjagtigt syd for Siena hos Andrea og Giorgio - to italienske bønder, som begge producerer højkvalitets olivenolie. Her rejser landsbyerne sig i bakkerne, og klimaet gør det ideelt for oliventræerne.&nbsp;<br><br>Vores navn Mont.Olio er præcis valgt, da vores oliven er høstet omkring de små "mont" landsbyer. Måske har du hørt om Montalcino, hvor noget af Italiens bedste vin kommer fra. Det samme gælder olivenolien. Alle vores olivenolier indeholder de fire traditionelle sorter fra Toscana: Leccino, Pendolino, Frantoio og Moraiolo. Høj kvalitet og friskhed - direkte fra bonden til dig.</p>
+                    <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-4" mbr-if="showButtons" data-toolbar="-mbrBtnMove"><a class="btn btn-success" href="produkter.html" data-app-placeholder="Type Text">Se vores produkter</a></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-{{imageWidth}}">
+                <div class="image-wrapper">
+                    <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/10-1.png" alt="Mobirise">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<section data-bs-version="5.1" class="businessm4_footer2" group="Footers" mbr-class="{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}">
+
+	<mbr-parameters>
+		<!-- Block parameters controls (Blue "Gear" panel) -->
+		<header>Size</header>
+		<input type="range" inline title="Top" name="paddingTop" min="0" max="8" step="1" value="4">
+		<input type="range" inline title="Bottom" name="paddingBottom" min="0" max="8" step="1" value="2">
+		<select title="Social Icons" name="iconsCount">
+			<option value="0" selected>0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+		</select>
+		<select name="columns" title="List Columns">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3" selected>3</option>
+			<option value="4">4</option>
+		</select>
+		<input type="range" inline title="Menu Items" name="countItem" min="0" max="10" step="1" value="1" condition="showCopyright">
+		<input type="range" title="Logo Size" name="logoSize" min="2" max="10" value="9" step="1" condition="showCopyright && showLogo" inline>
+		<header>Show / Hide</header>
+		<input type="checkbox" title="Copyright" name="showCopyright">
+		<input type="checkbox" title="Logo" name="showLogo" condition="showCopyright" checked>
+		<header>Background</header>
+		<input type="color" title="Circle" name="circleColor" value="#9f5513">
+		<input type="color" title="Circle Hover" name="circleHover" value="#fafafa">
+		<fieldset type="background" name="bg" parallax>
+			<input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png">
+			<input type="color" title="Color" value="#0d2412" selected>
+		</fieldset>
+		<input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+		<input type="color" title="Overlay Color" name="overlayColor" value="#e0d9bc" condition="overlay && bg.type !== 'color'">
+		<input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.3" condition="overlay && bg.type !== 'color'">
+		<!-- End block parameters -->
+	</mbr-parameters>
+
+	<div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+
+	<div class="container">
+		<div class="media-container-row content text-white">
+			<div class="col-md-6  mbr-fonts-style" mbr-theme-style="display-7" mbr-class="{'col-lg-3':columns==4,
+                             'col-lg-4':columns==3,
+                             'col-lg-6':columns==2,
+                             'col-lg-12':columns==1}">
+				<h5 class="pb-3 mbr-black title-card"><b>GODE LINKS</b></h5>
+				<p class="mbr-text p-title" data-app-selector=".p-title, .social-media"><b><b><a href="https://www.instagram.com/mont.olio/" class="text-secondary text-primary" target="_blank">Opskrifter &amp; inspiration</a></b></b><b><a href="https://www.instagram.com/mont.olio/" class="text-warning"><b><br></b></a><i><a href="smag.html" class="text-secondary text-primary">Smag&nbsp;Mont.Olio</a></i></b><br><a href="handelsbetingelser.html" class="text-secondary text-primary" target="_blank">Handelsbetingelser</a><a href="smagninger.html#top" class="text-secondary" style="font-weight: bold;"><br></a><b><b><br></b></b><br></p>
+			</div>
+			<div class="col-md-6  mbr-fonts-style" mbr-theme-style="display-7" mbr-class="{'col-lg-3':columns==4,
+                             'col-lg-4':columns==3,
+                             'col-lg-6':columns==2,
+                             'col-lg-12' :columns==1}" mbr-if="columns>1">
+				<h5 class="pb-3 mbr-black title-card"><b>OM OS</b></h5>
+				<p class="mbr-text p-title" data-app-selector=".p-title, .social-media"><b><b><b><a href="omos.html" class="text-secondary text-primary">Om Mont.Olio</a></b><br></b><b><a href="produkter.html" class="text-secondary text-primary">Vores produkter</a></b></b><br><b><b><a href="kontakt.html" class="text-secondary text-primary">Kontakt os</a></b></b><br></p>
+			</div>
+			<div class="col-md-6 mbr-fonts-style" mbr-theme-style="display-7" mbr-class="{'col-lg-3':columns==4,
+                             'col-lg-4':columns==3,
+                             'col-lg-6':columns==2,
+                             'col-lg-12' :columns==1}" mbr-if="columns>2">
+				<h5 class="pb-3 mbr-black title-card"><b>KONTAKT OS</b><br></h5>
+				<p class="mbr-text p-title" data-app-selector=".p-title, .social-media">Passion First Business ApS<br>Amagerfælledvej 118, 6 mf.&nbsp;<br>2300 København S&nbsp;<br><br>Tlf: 22336761<br>fieboegvad@gmail.com<br><br>CVR: 43387480<br></p>
+			</div>
+			<div class="col-md-6 mbr-fonts-style" mbr-theme-style="display-7" mbr-class="{'col-lg-3':columns==4,
+                             'col-lg-4':columns==3,
+                             'col-lg-6':columns==2,
+                             'col-lg-12' :columns==1}" mbr-if="columns>3">
+				<h5 class="pb-3 mbr-black title-card"><b>FØLG OS HER</b></h5>
+				<div class="social-media pb-3 align-left">
+					<ul>
+						<li mbr-if="iconsCount > 0">
+							<a class="icon-transition" href="https://www.instagram.com/mont.olio/">
+								<span mbr-icon class="mbr-iconfont socicon-instagram socicon" style="color: rgb(225, 218, 190); fill: rgb(225, 218, 190);"></span>
+							</a>
+						</li>
+						<li mbr-if="iconsCount > 1">
+							<a class="icon-transition" href="https://www.instagram.com/mont.olio/">
+								<span mbr-icon class="mbr-iconfont socicon-instagram socicon" style="color: rgb(224, 217, 188); fill: rgb(224, 217, 188);"></span>
+							</a>
+						</li>
+						<li mbr-if="iconsCount > 2">
+							<a class="icon-transition" href="#">
+								<span mbr-icon class="mbr-iconfont socicon-linkedin socicon" style="color: rgb(224, 217, 188); fill: rgb(224, 217, 188);"></span>
+							</a>
+						</li>
+						<li mbr-if="iconsCount > 3">
+							<a class="icon-transition" href="#">
+								<span mbr-icon class="mbr-iconfont socicon-youtube socicon"></span>
+							</a>
+						</li>
+						<li mbr-if="iconsCount > 4">
+							<a class="icon-transition" href="#">
+								<span mbr-icon class="mbr-iconfont socicon-rss socicon"></span>
+							</a>
+						</li>
+						<li mbr-if="iconsCount > 5">
+							<a class="icon-transition" href="#">
+								<span mbr-icon class="mbr-iconfont socicon-googleplus socicon"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-lower" mbr-if="showCopyright">
+			<div class="media-container-row">
+				<div class="col-sm-12">
+					<hr>
+				</div>
+			</div>
+			<div class="media-container-row mbr-white">
+				<div class="col-sm-6 copyright">
+					<a href="index.html#top"><img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/logo25-1.png" mbr-if="showLogo" mbr-style="{'width': logoSize + 'rem'}" alt></a>
+					<p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".copyright > p"></p>
+				</div>
+				<div class="col-md-6 menu-list" mbr-if="countItem>0">
+					<div class="footer-menu" mbr-list mbr-list-grow="countItem">
+						<span class="footer-menu__item" mbr-text>&nbsp;&nbsp;</span>
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

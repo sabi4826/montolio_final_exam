@@ -1,0 +1,403 @@
+<!-- ABOUT US HERO -->
+<section data-bs-version="5.1" class="header3" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <input type="id" name="sliderId">
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="2" condition="fullScreen == false">
+        <input type="range" inline name="imageWidth" title="Image" min="4" max="8" step="1" value="5">
+        <input type="checkbox" title="Reverse" name="reverseContent">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Subtitle" name="showSubtitle">
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/53-4.png" selected>
+            <input type="color" title="Color" value="#0e6b38">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row align-left justify-content-center align-content-around">
+            <div class="col-12 col-lg col-md-12 m-auto">
+                <div class="text-wrapper md-pb">
+                    <h2 class="mbr-section-subtitle mbr-fonts-style mb-2 align-left" data-app-selector=".mbr-section-subtitle" mbr-theme-style="display-7" mbr-if="showSubtitle"><b>OM MONT.OLIO</b></h2>
+                    <h1 class="mbr-section-title mbr-fonts-style mb-4 align-left" data-app-selector=".mbr-section-title" mbr-theme-style="display-2" mbr-if="showTitle"><b>Lidt om os</b><br></h1>
+                    <p class="mbr-text mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Vi hedder Christopher og Fie, og vi elsker bare god mad - især den italienske af slagsen! Efter mange forsøg på at lave mad som italienerne har vi erfaret, at det bare ikke kan lade sig gøre uden en god olivenolie.<br><br>Den holdning&nbsp;fik vi hurtigt fornemmelsen af, at vi langt fra er alene om. Mange danskere holder utrolig meget af det italienske køkken, men uden de rigtige råvarer bliver det bare ikke det samme. <br><br>Derfor valgte vi at skabe en direkte forbindelse til Andrea og Giorgio, vores to olivenoliebønder i Toscana. Én gang om året høster og presser de deres oliven, og vi fragter det til Danmark, så danskerne kan få olivenolie direkte fra høsten.<br></p>
+                     <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-4" mbr-if="showButtons"><a class="btn btn-warning" href="kontakt.html" data-app-placeholder="Type Text">Kontakt os</a></div> 
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-{{imageWidth}} image-wrapper">
+                <img class="w-100 contact-img" src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/pxl-20210927.jpeg" alt="Fie og Christopher er ejere af Mont.Olio">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT US GRID SECTION -->
+<section data-bs-version="5.1" class="features18 businessm4_features18" group="Features" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}">
+
+	<mbr-parameters>
+		<!-- Block parameters controls (Blue "Gear" panel) -->
+		<header>Size</header>
+		<input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="4">
+		<input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="5">
+		<select title="Rows Count" name="rowsCount">
+			<option value="1">1</option>
+			<option value="2" selected>2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
+		<header>Show / Hide</header>
+		<input type="checkbox" title="Section Title" name="showSectionTitle">
+		<input type="checkbox" title="Subtitle" name="showSubtitle">
+		<input type="checkbox" title="Icons" name="showIcon">
+		<input type="checkbox" title="Cards Title" name="showTitle" checked>
+		<input type="checkbox" title="Text" name="showText" checked>
+		<input type="checkbox" title="Buttons" name="showButtons">
+		<header>background</header>
+		<input type="color" title="Card" name="cardColor" value="#0d2412">
+		<fieldset type="background" name="bg" parallax>
+			<input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/53-4.png" parallax>
+			<input type="color" title="Color" value="#e6ddc3" selected>
+			<input type="video" title="Video" value="https://youtu.be/iM-NestDPNQ">
+		</fieldset>
+		<input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+		<input type="color" title="Overlay Color" name="overlayColor" value="#e0d9bc" condition="overlay && bg.type !== 'color'">
+		<input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0" condition="overlay && bg.type !== 'color'">
+		<!-- End block parameters -->
+	</mbr-parameters>
+
+	<div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+	</div>
+
+	<div class="container">
+		<h2 class="mbr-fonts-style mb-3 mbr-section-title align-left" mbr-theme-style="display-2" mbr-if="showSectionTitle" data-app-selector=".mbr-section-title">Business News</h2>
+		<h3 class="mbr-section-subtitle mbr-text mbr-fonts-style mb-4 mbr-light align-left" mbr-theme-style="display-7" data-app-selector=".mbr-section-subtitle" mbr-if="showSubtitle">Lorem ipsum dolor sit amet, consectetur
+			adipisicing elit. Ex itaque laboriosam quam,<br> consequuntur vero officiis molestias, inventore
+			repellendus.
+		</h3>
+
+		<div class="rows-wrapper">
+			<div class="row main align-items-center top-radius">
+				<div class="col-md-4 text-element">
+					<div class="text-content">
+						<div class="card-img pb-3 align-left">
+							<span mbr-if="showIcon" mbr-icon class="mbr-iconfont mbri-briefcase"></span>
+						</div>
+						<h2 class="mbr-title  mbr-fonts-style align-left " mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".mbr-title,.card-img"><b>
+							Passion og madglæde</b></h2>
+						<p class="mbr-text card-text mbr-light mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".card-text,.mbr-section-btn">Passion fylder meget for os, og vi er passionerede for mange ting, men især for god velsmagende mad og derfor olivenolie. Vi har begge rejst og været meget i Italien, og Christopher har boet i Italien i 4 år. At kunne sproget og have et italiensk netværk er vigtigt for os for at garantere en høj kvalitet og god og sund olivenolie.&nbsp;<br></p>
+						<div class="mbr-section-btn align-left" mbr-if="showButtons" data-toolbar="-mbrBtnMove" mbr-buttons mbr-theme-style="display-4">
+							<a class="btn-underline mr-3 text-info" href="https://mobiri.se">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 image-element align-self-stretch">
+					<div class="img-wrap">
+						<img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img-1737-793x529.jpeg" alt="Mont.Olio italiensk olivenolie">
+					</div>
+				</div>
+				<div class="col-md-4 text-element">
+					<div class="text-content">
+						<div class="card-img pb-3 align-left">
+							<span mbr-if="showIcon" mbr-icon class="mbr-iconfont mbri-idea"></span>
+						</div>
+						<h2 class="mbr-title  mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".mbr-title,.card-img"><b>Bedre kvalitet&nbsp;</b></h2>
+						<p class="mbr-text card-text mbr-light mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".card-text,.mbr-section-btn">Alle, der har smagt friskhøstet olivenolie fra Italien, ved, at der er stor forskel på kvaliteten, og hvor svært det er at opdrive i Danmark.
+<br>Man kan godt betale meget for en olivenolie i supermarkedet eller finde en specialforretning med god kvalitetsolie, men du skal selv kunne gennemskue, hvor frisk den er, og om den er god til maden. Vi vil ikke selv længere købe den forkerte olivenolie til vores mad.</p>
+						<div class="mbr-section-btn align-left" mbr-if="showButtons" data-toolbar="-mbrBtnMove" mbr-buttons mbr-theme-style="display-4">
+							<a class="btn-underline mr-3 text-info" href="https://mobiri.se">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main-reverse align-items-center" mbr-if="rowsCount > 1" mbr-class="{'bottom-radius':rowsCount==2}">
+				<div class="col-md-4 image-element align-self-stretch">
+					<div class="img-wrap">
+						<img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img-2880.jpg" alt>
+					</div>
+				</div>
+				<div class="col-md-4 text-element">
+					<div class="text-content">
+						<div class="card-img pb-3 align-left">
+							<span mbr-if="showIcon" mbr-icon class="mbr-iconfont mbri-growing-chart"></span>
+						</div>
+						<h2 class="mbr-title  mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".mbr-title,.card-img"><b>
+							Indkøb med omtanke</b></h2>
+						<p class="mbr-text card-text mbr-light mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".card-text,.mbr-section-btn">Vi ønsker med Mont.Olio at skabe et koncept med omtanke, som fokuserer på, at frisk olivenolie er en sæsonvare og ikke en lagervare. Af den grund samler vi alle bestillinger ind, koordinerer med Andrea og Giorgio og fragter den friske, sunde olie til Danmark kun én gang om året.&nbsp;På den måde ønsker vi at holde fragt-, CO2- og opbevaringsomkostninger nede, samtidigt med at du får den bedste olie - direkte fra bonden.</p>
+						<div class="mbr-section-btn align-left" mbr-if="showButtons" data-toolbar="-mbrBtnMove" mbr-buttons mbr-theme-style="display-4">
+							<a class="btn-underline mr-3 text-info" href="https://mobiri.se">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 image-element align-self-stretch">
+					<div class="img-wrap">
+						<img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/pxl_20221020-162420203-793x446.jpeg" alt="Mont.Olio olivenolie italien ">
+					</div>
+				</div>
+			</div>
+			<div class="row main align-items-center" mbr-if="rowsCount > 2" mbr-class="{'bottom-radius':rowsCount==3}">
+
+				<div class="col-md-4 text-element">
+					<div class="text-content">
+						<div class="card-img pb-3 align-left">
+							<span mbr-if="showIcon" mbr-icon class="mbr-iconfont mbri-like"></span>
+						</div>
+						<h2 class="mbr-title  mbr-fonts-style align-left" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".mbr-title,.card-img">
+							Lorem Ipsum
+						</h2>
+						<p class="mbr-text card-text mbr-light mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".card-text,.mbr-section-btn">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ullam expedita ex eos qui
+							autem
+						</p>
+						<div class="mbr-section-btn align-left" mbr-if="showButtons" data-toolbar="-mbrBtnMove" mbr-buttons mbr-theme-style="display-4">
+							<a class="btn-underline mr-3 text-info" href="https://mobiri.se">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 image-element align-self-stretch">
+					<div class="img-wrap">
+						<img src="file:///C:/Users/sabin/AppData/Local/Mobirise.com/Mobirise/fieboegvad_0040gmail_002ecom/addons/businessm4/components/_images/img/08.jpg">
+					</div>
+				</div>
+				<div class="col-md-4 text-element">
+					<div class="text-content">
+						<div class="card-img pb-3 align-left">
+							<span mbr-if="showIcon" mbr-icon class="mbr-iconfont mbri-like"></span>
+						</div>
+						<h2 class="mbr-title  mbr-fonts-style align-left" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".mbr-title,.card-img">
+							Lorem Ipsum
+						</h2>
+						<p class="mbr-text card-text mbr-light mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".card-text,.mbr-section-btn">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ullam expedita ex eos qui
+							autem
+						</p>
+						<div class="mbr-section-btn align-left" mbr-if="showButtons" data-toolbar="-mbrBtnMove" mbr-buttons mbr-theme-style="display-4">
+							<a class="btn-underline mr-3 text-info" href="https://mobiri.se">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main-reverse align-items-center" mbr-if="rowsCount > 3" mbr-class="{'bottom-radius':rowsCount==4}">
+				<div class="col-md-4 image-element align-self-stretch">
+					<div class="img-wrap">
+						<img src="file:///C:/Users/sabin/AppData/Local/Mobirise.com/Mobirise/fieboegvad_0040gmail_002ecom/addons/businessm4/components/_images/img/11.jpg">
+					</div>
+				</div>
+				<div class="col-md-4 text-element">
+					<div class="text-content">
+						<div class="card-img pb-3 align-left">
+							<span mbr-if="showIcon" mbr-icon class="mbr-iconfont mbri-like"></span>
+						</div>
+						<h2 class="mbr-title  mbr-fonts-style align-left" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".mbr-title,.card-img">
+							Lorem Ipsum
+						</h2>
+						<p class="mbr-text card-text mbr-light mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".card-text,.mbr-section-btn">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ullam expedita ex eos qui
+							autem
+						</p>
+						<div class="mbr-section-btn align-left" mbr-if="showButtons" data-toolbar="-mbrBtnMove" mbr-buttons mbr-theme-style="display-4">
+							<a class="btn-underline text-info mr-3" href="https://mobiri.se">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 image-element align-self-stretch">
+					<div class="img-wrap">
+						<img src="file:///C:/Users/sabin/AppData/Local/Mobirise.com/Mobirise/fieboegvad_0040gmail_002ecom/addons/businessm4/components/_images/img/12.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- OUR OIL IS FROM SIENA SECTION -->
+<section data-bs-version="5.1" class="header14" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="1" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="3" condition="fullScreen == false">
+        <input type="range" inline name="imageWidth" title="Image" min="4" max="8" step="1" value="5">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Remove Padding" name="imageFullWidth" condition="fullWidth">
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Button" name="showButtons" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-5.png" parallax>
+            <input type="color" title="Color" value="#0d6133" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#fafafa" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12 col-lg mt-5 py-5 mt-lg-0 pt-lg-0">
+                <div class="text-wrapper">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-4" data-app-selector=".mbr-section-title" mbr-theme-style="display-2" mbr-if="showTitle"><b>Vores olie kommer fra Siena</b></h1>
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Vores olivenolie er nøje udvalgt fra de toscanske bakker i Italien. Helt nøjagtigt syd fra Siena hos Andrea (på billedet) og Giorgio - to italienske bønder, som begge producerer høj kvalitets olivenolie. Her rejser landsbyerne sig i bakkerne, og klimaet gør det ideelt for oliventræerne.&nbsp;<br><br>Vores navn Mont.Olio er netop valgt, fordi vores oliven er høstet omkring de små "mont" landsbyer. Måske har du hørt om Montalcino, hvor noget af Italiens bedste vin kommer fra. Det samme gælder olivenolien. Alle vores olivenolier indeholder de fire traditionelle sorter fra Toscana: Leccino, Pendolino, Frantoio og Moraiolo. Mont.Olio-olier har en høj kvalitet og friskhed - direkte fra bonden til dig.&nbsp;<br><br>Konceptet er enkelt: du bestiller olier hos os inden deadline i efteråret, og vi lægger en samlet ordre hos Andrea og Giorgio, der høster og presser deres oliven. Vi sørger for én samlet levering til Danmark og sender dine olier til dig kort efter høsten.</p>
+                    <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-4" mbr-if="showButtons" data-toolbar="-mbrBtnMove"><a class="btn btn-warning" href="produkter.html#formbuilder-8e" data-app-placeholder="Type Text">Bestil nu</a></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-{{imageWidth}}">
+                <div class="image-wrapper">
+                    <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/pxl_20221020-81944760-1036x1842.jpeg" alt="Billede af bonden Andrea, Mont.Olio olivenolie ">
+                    <figcaption>Olivenbonden Andrea med en dåse Mont.Olio. Privatfoto.</figcaption>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PHOTOS FROM TOSCANA SECTION -->
+<section data-bs-version="5.1" class="gallery5 mbr-gallery" group="Sliders & Galleries" data-bg-video="{{bg.type == 'video' && bg.value.url}}">
+    <mbr-parameters>
+        <input type="id" name="idGallery">
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <select title="Columns" name="cardsWidth">
+            <option value="12">1</option>
+            <option value="6">2</option>
+            <option value="4">3</option>
+            <option value="3" selected>4</option>
+        </select>
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Subtitle" name="showSubtitle">
+        <header>Images</header>
+        <input type="checkbox" title="Auto Size" name="autoSize" checked>
+        <input type="range" name="imageHeight" title="Height" min="1" max="5" step="1" value="3" condition="autoSize && showItemSubtitle">
+        <input type="checkbox" title="Spacing" name="spacing" checked>
+        <input type="checkbox" title="Caption" name="showItemSubtitle" checked>
+        <header>Popup Slider</header>
+        <input type="checkbox" title="Fade Effect" name="fade" checked>
+        <input type="checkbox" title="Autoplay" name="autoplay" checked>
+        <input type="range" title="Interval" name="interval" min="3" max="10" value="8" step="1" condition="autoplay">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png" parallax selected>
+            <input type="color" title="Color" value="#ffffff">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background13.jpg" name="fallBackImage" condition="bg.type === 'video'">
+        <header condition="bg.type!=='color'">Overlay</header>
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#fafafa" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.6" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth,
+                    'container-fluid': fullWidth}">
+        <div class="mbr-section-head" mbr-if="showTitle || showSubtitle">
+            <h3 class="mbr-section-title mbr-fonts-style align-center m-0" mbr-theme-style="display-2" mbr-if="showTitle"><b>Se billeder fra Toscana</b></h3>
+            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2" mbr-theme-style="display-5" mbr-if="showSubtitle"></h4>
+        </div>
+        <div class="row mbr-gallery mt-4">
+            
+            <div class="col-12 col-md-6 col-lg-{{cardsWidth}} item gallery-image active">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#{{idGallery}}-modal" data-bs-target="#{{idGallery}}-modal">
+                    <img class="w-100" src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/.trashed-1668848688-pxl-20221020.jpg" alt="Mont.Olio olivenbonden Andrea sammen med ejerne af Mont.Olio" data-target="#lb-{{idGallery}}" data-bs-target="#lb-{{idGallery}}" data-slide-to="0" data-bs-slide-to="0">
+                    <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div>
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2" mbr-theme-style="display-7" mbr-if="showItemSubtitle">Os sammen med olivenbonden Andrea</h6>
+            </div>
+            <div class="col-12 col-md-6 col-lg-{{cardsWidth}} item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#{{idGallery}}-modal" data-bs-target="#{{idGallery}}-modal">
+                    <img class="w-100" src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img-1819.jpg" alt="Mont.Olio olivenhøst i Toscana" data-target="#lb-{{idGallery}}" data-bs-target="#lb-{{idGallery}}" data-slide-to="1" data-bs-slide-to="1">
+                    <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div>
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2" mbr-theme-style="display-7" mbr-if="showItemSubtitle">Nyhøstede oliven</h6>
+            </div><div class="col-12 col-md-6 col-lg-{{cardsWidth}} item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#{{idGallery}}-modal" data-bs-target="#{{idGallery}}-modal">
+                    <img class="w-100" src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img-1791.jpg" alt="Mont.Olio olivenbonden Giorgio" data-target="#lb-{{idGallery}}" data-bs-target="#lb-{{idGallery}}" data-slide-to="2" data-bs-slide-to="2">
+                    <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div>
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2" mbr-theme-style="display-7" mbr-if="showItemSubtitle">Olivenbonden Giorgio</h6>
+            </div>
+            <div class="col-12 col-md-6 col-lg-{{cardsWidth}} item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#{{idGallery}}-modal" data-bs-target="#{{idGallery}}-modal">
+                    <img class="w-100" src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img-1816.jpg" alt="Mont.Olio olivenhøst i Toscana" data-target="#lb-{{idGallery}}" data-bs-target="#lb-{{idGallery}}" data-slide-to="3" data-bs-slide-to="3">
+                    <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div>
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2" mbr-theme-style="display-7" mbr-if="showItemSubtitle">Olivenhøst i Siena</h6>
+            </div>
+        </div>
+
+        <div class="modal mbr-slider" id="{{idGallery}}-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="lb-{{idGallery}}" class="carousel slide" mbr-class="{'carousel-fade': fade}" data-ride="{{autoplay ? 'carousel' : false}}" data-bs-ride="{{autoplay ? 'carousel' : false}}" data-interval="{{interval*1000}}" data-bs-interval="{{interval*1000}}">
+                            <div class="carousel-inner">
+                                
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../_images/features/features2.jpg" alt="Mobirise Website Builder">
+                                </div>
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="../_images/features/features1.jpg" alt="Mobirise Website Builder">
+                                </div><div class="carousel-item">
+                                    <img class="d-block w-100" src="../_images/features/features3.jpg" alt="Mobirise Website Builder">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../_images/features/features4.jpg" alt="Mobirise Website Builder">
+                                </div>
+                            </div>
+                            <ol class="carousel-indicators">
+                                <li data-target="#lb-{{idGallery}}" data-bs-target="#lb-{{idGallery}}" data-slide-to="0" data-bs-slide-to="0" class="active"></li>
+                                <li data-target="#lb-{{idGallery}}" data-bs-target="#lb-{{idGallery}}" data-slide-to="1" data-bs-slide-to="1"></li>
+                                <li data-target="#lb-{{idGallery}}" data-bs-target="#lb-{{idGallery}}" data-slide-to="2" data-bs-slide-to="2"></li>
+                                <li data-target="#lb-{{idGallery}}" data-bs-target="#lb-{{idGallery}}" data-slide-to="3" data-bs-slide-to="3"></li>
+                            </ol>
+                            <a role="button" href class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close">
+                            </a>
+                            <a class="carousel-control-prev carousel-control" href="#lb-{{idGallery}}" role="button" data-slide="prev" data-bs-slide="prev">
+                                <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
+                                <span class="sr-only visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next carousel-control" href="#lb-{{idGallery}}" role="button" data-slide="next" data-bs-slide="next">
+                                <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
+                                <span class="sr-only visually-hidden">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

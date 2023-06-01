@@ -1,0 +1,637 @@
+<!-- ORGANIC OLIVE OIL SECTION -->
+<section data-bs-version="5.1" class="pricing3" group="Pricing">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="4">
+        <select title="Columns" name="cardsWidth">
+            <option value="12">1</option>
+            <option value="6">2</option>
+            <option value="4">3</option>
+            <option value="3" selected>4</option>
+        </select><select title="Align" name="align">
+            <option value="justify-content-start">Left</option>
+            <option value="justify-content-center" selected>Center</option>
+            <option value="justify-content-end">Right</option>
+        </select>
+
+        <header>Show/Hide</header>
+        <input type="checkbox" name="showTitle" title="Title" checked>
+        <input type="checkbox" name="showSubtitle" title="Subtitle">
+        <header>Cards</header>
+        <input type="checkbox" name="autoSize" title="Auto Size">
+        <input type="range" name="imageHeight" title="Height" min="1" max="5" step="1" value="3" condition="autoSize && !(showButtons==false && showCardSubtitle==false && showCardTitle==false && showText==false)">
+        <input type="checkbox" title="Spacing" name="spacing" checked>
+        <input type="checkbox" name="showCardTitle" title="Title" checked>
+        <input type="checkbox" name="showCardSubtitle" title="Subtitle">
+        <input type="checkbox" name="showText" title="Text">
+        <input type="checkbox" name="showAmount" title="Amount">
+        <input type="checkbox" name="showPrice" title="Price" checked>
+        <input type="checkbox" name="showButtons" title="Buttons" checked>
+        <select title="Align" name="alignButtons" condition="showButtons">
+            <option value="justify-content-start">Left</option>
+            <option value="justify-content-center" selected>Center</option>
+            <option value="justify-content-end">Right</option>
+        </select>
+        <input type="checkbox" name="addBg" title="Background" checked>
+        <input type="color" name="cardsBg" title="Color" value="#232323" condition="addBg">
+        <header>Background</header>
+        <fieldset type="background" name="bg" required>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/14-5.png" selected>
+            <input type="color" title="Color" value="#0e6b38">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#0e6b38" condition="overlay && bg.type == 'image'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.5" condition="overlay && bg.type == 'image'">
+    </mbr-parameters>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'"></div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="mbr-section-head mb-5" mbr-if="showTitle || showSubtitle">
+            <h4 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle" data-app-selector=".mbr-section-title"><b>&nbsp;Økologisk ekstra jomfruolivenolie</b></h4>
+            <h5 class="mbr-section-subtitle mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showSubtitle" data-app-selector=".mbr-section-subtitle">Hvor meget skal jeg bestille?&nbsp;</h5>
+        </div>
+        <div class="row {{align}}">
+            <div class="item features-image сol-12 col-md-6 col-lg-{{cardsWidth}}">
+                <div class="item-wrapper">
+                    <div>
+                        <div class="item-img">
+                            <a href="andrea.html"><img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img111-5-1288x1221.png" alt="Mont.Olio frisk italiensk olivenolie"></a>
+                        </div>
+                        <div class="item-content" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+                            <h5 class="item-title mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-title" mbr-if="showCardTitle">
+                                <b>"Andrea" økologisk ekstra jomfruolivenolie fra Andrea</b><br><b>(0,5L)</b><br></h5>
+                            <h6 class="item-subtitle mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-subtitle" mbr-if="showCardSubtitle">
+                                Card Subtitle
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style" mbr-if="showText" mbr-theme-style="display-4" data-app-selector=".mbr-text, .mbr-section-btn">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-footer">
+                        <p class="mbr-amount mbr-fonts-style" mbr-if="showAmount" mbr-theme-style="display-7" data-app-selector=".mbr-amount, .mbr-section-btn">
+                            <b>45 g * 12 pc</b>
+                        </p>
+                        <p class="mbr-price mbr-fonts-style" mbr-if="showPrice" mbr-theme-style="display-7" data-app-selector=".mbr-price, .mbr-section-btn"><b><i>DKK 145,00</i></b></p>
+                        <div class="mbr-section-btn {{alignButtons}}" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons mbr-theme-style="display-4"><a href="andrea.html" class="btn item-btn btn-success" data-app-placeholder="Type Text">
+                                <strong>Se detaljer</strong>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-{{cardsWidth}}">
+                <div class="item-wrapper">
+                    <div>
+                        <div class="item-img">
+                            <a href="giorgio.html"><img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img110-6-1288x1221.jpeg" alt="Mont.Olio frisk italiensk olivenolie"></a>
+                        </div>
+                        <div class="item-content" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+                            <h5 class="item-title mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-title" mbr-if="showCardTitle">
+                                <b>"Giorgio" øk</b><b>ologisk ekstra jomfruolivenolie fra Giorgio</b><br><b>(0,5L)</b></h5>
+                            <h6 class="item-subtitle mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-subtitle" mbr-if="showCardSubtitle">
+                                Card Subtitle
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style" mbr-if="showText" mbr-theme-style="display-4" data-app-selector=".mbr-text, .mbr-section-btn">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-footer">
+                        <p class="mbr-amount mbr-fonts-style" mbr-if="showAmount" mbr-theme-style="display-7" data-app-selector=".mbr-amount, .mbr-section-btn">
+                            <b>45 g * 12 pc</b>
+                        </p>
+                        <p class="mbr-price mbr-fonts-style" mbr-if="showPrice" mbr-theme-style="display-7" data-app-selector=".mbr-price, .mbr-section-btn"><b><i>DKK 145,00</i></b></p>
+                        <div class="mbr-section-btn {{alignButtons}}" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons mbr-theme-style="display-4"><a href="giorgio.html" class="btn item-btn btn-success" data-app-placeholder="Type Text">
+                                <strong>Se detaljer</strong>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- OLIVE OIL WITH FLAVOURS SECTION  -->
+<section data-bs-version="5.1" class="pricing3" group="Pricing">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="0">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="6">
+        <select title="Columns" name="cardsWidth">
+            <option value="12">1</option>
+            <option value="6">2</option>
+            <option value="4">3</option>
+            <option value="3" selected>4</option>
+        </select><select title="Align" name="align">
+            <option value="justify-content-start">Left</option>
+            <option value="justify-content-center" selected>Center</option>
+            <option value="justify-content-end">Right</option>
+        </select>
+
+        <header>Show/Hide</header>
+        <input type="checkbox" name="showTitle" title="Title" checked>
+        <input type="checkbox" name="showSubtitle" title="Subtitle">
+        <header>Cards</header>
+        <input type="checkbox" name="autoSize" title="Auto Size">
+        <input type="range" name="imageHeight" title="Height" min="1" max="5" step="1" value="3" condition="autoSize && !(showButtons==false && showCardSubtitle==false && showCardTitle==false && showText==false)">
+        <input type="checkbox" title="Spacing" name="spacing" checked>
+        <input type="checkbox" name="showCardTitle" title="Title" checked>
+        <input type="checkbox" name="showCardSubtitle" title="Subtitle">
+        <input type="checkbox" name="showText" title="Text">
+        <input type="checkbox" name="showAmount" title="Amount">
+        <input type="checkbox" name="showPrice" title="Price" checked>
+        <input type="checkbox" name="showButtons" title="Buttons" checked>
+        <select title="Align" name="alignButtons" condition="showButtons">
+            <option value="justify-content-start">Left</option>
+            <option value="justify-content-center" selected>Center</option>
+            <option value="justify-content-end">Right</option>
+        </select>
+        <input type="checkbox" name="addBg" title="Background" checked>
+        <input type="color" name="cardsBg" title="Color" value="#0d2412" condition="addBg">
+        <header>Background</header>
+        <fieldset type="background" name="bg" required>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/14-3.png" selected>
+            <input type="color" title="Color" value="#f3edf7">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#0e6b38" condition="overlay && bg.type == 'image'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.5" condition="overlay && bg.type == 'image'">
+    </mbr-parameters>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'"></div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="mbr-section-head mb-5" mbr-if="showTitle || showSubtitle">
+            <h4 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle" data-app-selector=".mbr-section-title"><b>Ekstra jomfruolivenolie med smag</b><b><br></b></h4>
+            <h5 class="mbr-section-subtitle mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showSubtitle" data-app-selector=".mbr-section-subtitle">To add more cards, hover on a card and
+                click 'Add items'</h5>
+        </div>
+        <div class="row {{align}}">
+            <div class="item features-image сol-12 col-md-6 col-lg-{{cardsWidth}}">
+                <div class="item-wrapper">
+                    <div>
+                        <div class="item-img">
+                            <a href="trøffel.html"><img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img113-4-1288x1221.png" alt="Mont.Olio italiensk olivenolie" data-slide-to="0" data-bs-slide-to="0"></a>
+                        </div>
+                        <div class="item-content" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+                            <h5 class="item-title mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-title" mbr-if="showCardTitle">
+                                <b>Ekstra jomfruolivenolie</b><br><b>med hvid trøffel </b><br><b>(0,25L)</b></h5>
+                            <h6 class="item-subtitle mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-subtitle" mbr-if="showCardSubtitle">
+                                Card Subtitle
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style" mbr-if="showText" mbr-theme-style="display-4" data-app-selector=".mbr-text, .mbr-section-btn">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-footer">
+                        <p class="mbr-amount mbr-fonts-style" mbr-if="showAmount" mbr-theme-style="display-7" data-app-selector=".mbr-amount, .mbr-section-btn">
+                            <b>45 g * 12 pc</b>
+                        </p>
+                        <p class="mbr-price mbr-fonts-style" mbr-if="showPrice" mbr-theme-style="display-7" data-app-selector=".mbr-price, .mbr-section-btn"><b><i>DKK 95,00</i></b></p>
+                        <div class="mbr-section-btn {{alignButtons}}" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons mbr-theme-style="display-4"><a href="trøffel.html" class="btn item-btn btn-success" data-app-placeholder="Type Text">
+                                <strong>Se detaljer</strong>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item features-image сol-12 col-md-6 col-lg-{{cardsWidth}}">
+                <div class="item-wrapper">
+                    <div>
+                        <div class="item-img">
+                            <a href="krydderurter.html"><img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img114-2-1288x1221.png" alt="Mont.Olio italiensk olivenolie" data-slide-to="1" data-bs-slide-to="1"></a>
+                        </div>
+                        <div class="item-content" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+                            <h5 class="item-title mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-title" mbr-if="showCardTitle"><b>Ekstra jomfruolivenolie
+</b><div><b>med krydderurter </b></div><div><b>(0,25L)</b></div></h5>
+                            <h6 class="item-subtitle mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-subtitle" mbr-if="showCardSubtitle">
+                                Card Subtitle
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style" mbr-if="showText" mbr-theme-style="display-4" data-app-selector=".mbr-text, .mbr-section-btn">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-footer">
+                        <p class="mbr-amount mbr-fonts-style" mbr-if="showAmount" mbr-theme-style="display-7" data-app-selector=".mbr-amount, .mbr-section-btn">
+                            <b>45 g * 12 pc</b>
+                        </p>
+                        <p class="mbr-price mbr-fonts-style" mbr-if="showPrice" mbr-theme-style="display-7" data-app-selector=".mbr-price, .mbr-section-btn"><b><i>DKK 95,00</i></b><br></p>
+                        <div class="mbr-section-btn {{alignButtons}}" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons mbr-theme-style="display-4"><a href="krydderurter.html" class="btn item-btn btn-success" data-app-placeholder="Type Text">
+                                <strong>Se detaljer</strong>
+                            </a></div>
+                    </div>
+                </div>
+            </div><div class="item features-image сol-12 col-md-6 col-lg-{{cardsWidth}}">
+                <div class="item-wrapper">
+                    <div>
+                        <div class="item-img">
+                            <a href="fennikel.html"><img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img115-4-1288x1222.png" alt="Mont.Olio italiensk olivenolie" data-slide-to="2" data-bs-slide-to="2"></a>
+                        </div>
+                        <div class="item-content" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+                            <h5 class="item-title mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-title" mbr-if="showCardTitle"><b>Ekstra jomfruolivenolie
+</b><div><b>med fennikel </b></div><div><b>(0,25L)</b></div></h5>
+                            <h6 class="item-subtitle mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-subtitle" mbr-if="showCardSubtitle">
+                                Card Subtitle
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style" mbr-if="showText" mbr-theme-style="display-4" data-app-selector=".mbr-text, .mbr-section-btn">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-footer">
+                        <p class="mbr-amount mbr-fonts-style" mbr-if="showAmount" mbr-theme-style="display-7" data-app-selector=".mbr-amount, .mbr-section-btn">
+                            <b>45 g * 12 pc</b>
+                        </p>
+                        <p class="mbr-price mbr-fonts-style" mbr-if="showPrice" mbr-theme-style="display-7" data-app-selector=".mbr-price, .mbr-section-btn"><b><i>DKK 95,00</i></b></p>
+                        <div class="mbr-section-btn {{alignButtons}}" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons mbr-theme-style="display-4"><a href="fennikel.html" class="btn item-btn btn-success" data-app-placeholder="Type Text">
+                                <strong>Se detaljer</strong>
+                            </a></div>
+                    </div>
+                </div>
+            </div><div class="item features-image сol-12 col-md-6 col-lg-{{cardsWidth}}">
+                <div class="item-wrapper">
+                    <div>
+                        <div class="item-img">
+                            <a href="chili.html"><img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img112-10-1288x1222.png" alt="Mont.Olio italiensk olivenolie" data-slide-to="3" data-bs-slide-to="3"></a>
+                        </div>
+                        <div class="item-content" mbr-if="showCardTitle || showCardSubtitle || showText || showButtons">
+                            <h5 class="item-title mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-title" mbr-if="showCardTitle"><b>Ekstra jomfruolivenolie
+</b><div><b>med chili </b></div><div><b>(0,25L)</b></div></h5>
+                            <h6 class="item-subtitle mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".item-subtitle" mbr-if="showCardSubtitle">
+                                Card Subtitle
+                            </h6>
+                            <p class="mbr-text mbr-fonts-style" mbr-if="showText" mbr-theme-style="display-4" data-app-selector=".mbr-text, .mbr-section-btn">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-footer">
+                        <p class="mbr-amount mbr-fonts-style" mbr-if="showAmount" mbr-theme-style="display-7" data-app-selector=".mbr-amount, .mbr-section-btn">
+                            <b>45 g * 12 pc</b>
+                        </p>
+                        <p class="mbr-price mbr-fonts-style" mbr-if="showPrice" mbr-theme-style="display-7" data-app-selector=".mbr-price, .mbr-section-btn"><b><i>DKK 95,00</i></b></p>
+                        <div class="mbr-section-btn {{alignButtons}}" mbr-if="showButtons" data-toolbar="-mbrBtnMove,-mbrBtnAdd" mbr-buttons mbr-theme-style="display-4"><a href="chili.html" class="btn item-btn btn-success" data-app-placeholder="Type Text">
+                                <strong>Se detaljer</strong>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+/* OUR OLIVE OIL IS FROM SECTION */
+<section data-bs-version="5.1" class="header14" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="0" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="2" condition="fullScreen == false">
+        <input type="range" inline name="imageWidth" title="Image" min="4" max="8" step="1" value="5">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Remove Padding" name="imageFullWidth" condition="fullWidth">
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Button" name="showButtons" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/14-1.png" selected parallax>
+            <input type="color" title="Color" value="#deddc4">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.3" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12 col-lg mt-5 py-5 mt-lg-0 pt-lg-0">
+                <div class="text-wrapper">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-4" data-app-selector=".mbr-section-title" mbr-theme-style="display-2" mbr-if="showTitle"><b>
+                        Hvor kommer vores olivenolie fra?</b></h1>
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Vores olivenolie er nøje udvalgt fra de toscanske bakker i Italien. Helt nøjagtigt syd for Siena hos Andrea og Giorgio - to italienske bønder, som begge producerer højkvalitets olivenolie. Her rejser landsbyerne sig i bakkerne, og klimaet gør det ideelt for oliventræerne.&nbsp;<br><br>Vores navn Mont.Olio er netop valgt, da vores oliven er høstet omkring de små "mont" landsbyer. Måske har du hørt om Montalcino, hvor noget af Italiens bedste vin kommer fra. Det samme gælder olivenolien.&nbsp;Alle vores olivenolier indeholder de fire traditionelle sorter fra Toscana: Leccino, Pendolino, Frantoio og Moraiolo.<br>Høj kvalitet og friskhed - direkte fra bonden til dig.</p>
+                    <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-4" mbr-if="showButtons" data-toolbar="-mbrBtnMove"><a class="btn btn-success" href="smag.html" data-app-placeholder="Type Text">Smag Mont.Olio</a></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-{{imageWidth}}">
+                <div class="image-wrapper">
+                    <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/10-1.png" alt="Mobirise">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FREE GIFT WITH PURCHASE SECTION  -->
+<section data-bs-version="5.1" class="features17" group="Features" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}" plugins="mobirise-icons2">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="6">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="6">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showMainTitle" checked>
+        <input type="checkbox" title="Subtitle" name="showMainSubtitle">
+        <header>Card</header>
+        <input type="checkbox" title="Title" name="showTitle">
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Link" name="showLink">
+        <select title="Cards" name="cardsAmount">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/53-7.png" selected>
+            <input type="color" title="Color" value="#ffffff">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background13.jpg" name="fallBackImage" condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.4" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="mbr-section-head" mbr-if="showMainTitle || showMainSubtitle">
+            <div class="col-12">
+                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0" mbr-theme-style="display-2" mbr-if="showMainTitle" data-app-selector=".mbr-section-title"><b>Som tak giver vi en gratis olie!</b></h4>
+                <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2" mbr-theme-style="display-5" mbr-if="showMainSubtitle" data-app-selector=".mbr-section-subtitle">
+                    List main features of your project in this block
+                </h5>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-6" mbr-class="{'col-lg-6': cardsAmount == '2',
+                                                     'col-lg-3': cardsAmount == '4',
+                                                     'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper mb-4">
+                    <div class="card-box align-left" mbr-if="showTitle || showText || showLink">
+                        <h4 class="card-title mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".card-title, .card-box">
+                            <b>No Coding</b>
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style mb-3" mbr-theme-style="display-5" mbr-if="showText" data-app-selector=".mbr-text, .link">
+                            Ved køb af mindst seks olier giver vi dig en "Giorgio" med krydderurter (0,25 L) med i købet. Du behøver ikke tilføje den til din order, vi sender den automatisk med.</p><div class="link-wrap">
+                                <h6 class="link mbr-fonts-style align-left" mbr-theme-style="display-4" mbr-if="showLink" data-app-selector=".link">
+                                    <a class="text-white" href="#">Learn more &gt;</a>
+                                </h6>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" mbr-if="cardsAmount > 1" mbr-class="{'col-lg-6': cardsAmount == '2', 'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper mb-4">
+                    <div class="card-box align-left" mbr-if="showTitle || showText || showLink">
+                        <h4 class="card-title mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".card-title, .card-box">
+                            <b>Mobile Friendly</b>
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style mb-3" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .link">
+                            All sites you create with the Mobirise web builder are mobile-friendly natively. No special
+                            actions required.
+                            </p><div class="link-wrap">
+                                <h6 class="link mbr-fonts-style align-left" mbr-theme-style="display-4" mbr-if="showLink" data-app-selector=".link">
+                                    <a class="text-primary" href="#">Learn more &gt;</a>
+                                </h6>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" mbr-if="cardsAmount > 2" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper mb-4">
+                    <div class="card-box align-left" mbr-if="showTitle || showText || showLink">
+                        <h4 class="card-title mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".card-title, .card-box">
+                            <b>Unique Styles</b>
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style mb-3" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .link">
+                            Select the theme that suits you. Each theme in the Mobirise site builder contains a set of
+                            unique blocks.
+                            </p><div class="link-wrap">
+                                <h6 class="link mbr-fonts-style align-left" mbr-theme-style="display-4" mbr-if="showLink" data-app-selector=".link">
+                                    <a class="text-primary" href="#">Learn more &gt;</a>
+                                </h6>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3" mbr-if="cardsAmount > 3">
+                <div class="card-wrapper mb-4">
+                    <div class="card-box align-left" mbr-if="showTitle || showText || showLink">
+                        <h4 class="card-title mbr-fonts-style align-left" mbr-theme-style="display-7" mbr-if="showTitle" data-app-selector=".card-title, .card-box">
+                            <b>Unlimited Sites</b>
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style mb-3" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .link">
+                            Use Mobirise website building software to create multiple sites for commercial and
+                            non-profit projects.
+                            </p><div class="link-wrap">
+                                <h6 class="link mbr-fonts-style align-left" mbr-theme-style="display-4" mbr-if="showLink" data-app-selector=".link">
+                                    <a class="text-primary" href="#">Learn more &gt;</a>
+                                </h6>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  ORDER OIL FORM FIELD SECTION -->
+<section class="form" group="Form" plugins="formstyler, datepicker">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <header>Style</header>
+        <input type="checkbox" name="customStyle" title="Custom Style" checked>
+        <input type="checkbox" name="disableElements" title="Disable Control">
+        <input type="color" name="fieldColor" title="Field" value="#ffffff" condition="customStyle">
+        <input type="color" name="fieldHover" title="Field Hover" value="#ffffff" condition="customStyle">
+        <input type="color" name="borderColor" title="Border" value="#232323" condition="customStyle">
+        <input type="color" name="borderHover" title="Border Hover" value="#232323" condition="customStyle">
+        <input type="color" name="formText" title="Text" value="#232323" condition="customStyle">
+        <input type="color" name="formFocusText" title="Text Focus" value="#232323" condition="customStyle">
+        <input type="color" name="formPlaceholder" title="Placeholders" value="#c1c1c1" condition="customStyle">
+        <input type="color" name="formFocusPlaceholder" title="Placeholders Focus" value="#c1c1c1" condition="customStyle">
+        <header>Background</header>
+        <fieldset type="background" name="bg">
+            <input type="image" title="Background Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png" selected>
+            <input type="color" title="Background Color" value="#e6ddc3">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#fafafa" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.6" condition="overlay && bg.type !== 'color'">
+    <input type="hidden" name="usedRecaptcha" value="false"></mbr-parameters>
+    <div class="mbr-overlay" mbr-if="(overlay && bg.type=='image')"></div>
+    <div class="container">
+        <div class="row">
+            <div mbr-form class="col-lg-8 mx-auto mbr-form">
+<!--Formbuilder Form-->
+<form action="sabineov@gmail.com" name="Købsflow" method="POST" class="mbr-form form-with-styler" data-verified="sabineov@gmail.com">
+<div class="form-row">
+<div hidden="hidden" data-form-alert class="alert alert-success col-12">Tak, vi har modtaget din bestilling! Du får en ordrebekræftelse med betalingsoplysninger i din indbakke snarest.</div>
+<div hidden="hidden" data-form-alert-danger class="alert alert-danger col-12">Øv, der gik noget galt! Prøv igen, eller kontakt os direkte på fieboegvad@gmail.com.</div>
+</div>
+<div class="dragArea row">
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h2 mbr-theme-style="display-2" class="mbr-fonts-style mbr-bold">Bestil dine Mont.Olio her</h2>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h4 mbr-theme-style="display-5" class="mbr-fonts-style">Send os din bestilling ved at udfylde formularen. Du kan bestille vores årspakker eller blande selv. Vi sender dig en ordrebekræftelse med betalingsoplysninger, og olivenolien leverer vi, når den er høstet og klar fra bonden.</h4>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<hr>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h4 mbr-theme-style="display-5" class="mbr-fonts-style mbr-bold">Årspakker:</h4>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 form-group">
+<div class="form-control-label">
+</div>
+<div data-for="Den store: 6 Andrea, 6 Giorgio, 12 olier m. smag (3 af hver)" class="form-check ms-2">
+<input type="checkbox" value="Yes" name="Den store: 6 Andrea, 6 Giorgio, 12 olier m. smag (3 af hver)" data-form-field="Den store: 6 Andrea, 6 Giorgio, 12 olier m. smag (3 af hver)" mbr-theme-style="display-7" class="form-check-input">
+<label mbr-text for="Den store: 6 Andrea, 6 Giorgio, 12 olier m. smag (3 af hver)" mbr-theme-style="display-7" class="form-check-label">Den store: 6 Andrea, 6 Giorgio, 12 olier m. smag (3 af hver)</label>
+</div>
+<div data-for="Den lille: 3 Andrea, 3 Giorgio, 4 olier m. smag (1 af hver)" class="form-check ms-2">
+<input type="checkbox" value="Yes" name="Den lille: 3 Andrea, 3 Giorgio, 4 olier m. smag (1 af hver)" data-form-field="Den lille: 3 Andrea, 3 Giorgio, 4 olier m. smag (1 af hver)" mbr-theme-style="display-7" class="form-check-input">
+<label mbr-text for="Den lille: 3 Andrea, 3 Giorgio, 4 olier m. smag (1 af hver)" mbr-theme-style="display-7" class="form-check-label">Den lille: 3 Andrea, 3 Giorgio, 4 olier m. smag (1 af hver)</label>
+</div>
+<div data-for="Den milde: 8 Andrea, 8 olier m. smag (2 af hver)" class="form-check ms-2">
+<input type="checkbox" value="Yes" name="Den milde: 8 Andrea, 8 olier m. smag (2 af hver)" data-form-field="Den milde: 8 Andrea, 8 olier m. smag (2 af hver)" mbr-theme-style="display-7" class="form-check-input">
+<label mbr-text for="Den milde: 8 Andrea, 8 olier m. smag (2 af hver)" mbr-theme-style="display-7" class="form-check-label">Den milde: 8 Andrea, 8 olier m. smag (2 af hver)</label>
+</div>
+<div data-for="Den kraftfulde: 8 Giorgio, 8 olier m. smag (2 af hver)" class="form-check ms-2">
+<input type="checkbox" value="Yes" name="Den kraftfulde: 8 Giorgio, 8 olier m. smag (2 af hver)" data-form-field="Den kraftfulde: 8 Giorgio, 8 olier m. smag (2 af hver)" mbr-theme-style="display-7" class="form-check-input">
+<label mbr-text for="Den kraftfulde: 8 Giorgio, 8 olier m. smag (2 af hver)" mbr-theme-style="display-7" class="form-check-label">Den kraftfulde: 8 Giorgio, 8 olier m. smag (2 af hver)</label>
+</div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h4 mbr-theme-style="display-5" class="mbr-fonts-style mbr-bold">Olier:</h4>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h5 mbr-theme-style="display-7" class="mbr-fonts-style">Økologisk olivenolie, 0,5 L, 145 kr. stk:</h5>
+</div>
+<div data-for="order_andrea" class="col-lg-4 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="order_andrea" class="form-control-label mbr-fonts-style">Andrea, notér antal stk:</label>
+<input type="number" name="order_andrea" max="100" min="0" step="1" data-form-field="order_andrea" mbr-theme-style="display-7" class="form-control" value>
+</div>
+<div data-for="order_giorgio" class="col-lg-4 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="order_giorgio" class="form-control-label mbr-fonts-style">Giorgio, notér antal stk: </label>
+<input type="number" name="order_giorgio" max="100" min="0" step="1" data-form-field="order_giorgio" mbr-theme-style="display-7" class="form-control" value>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h5 mbr-theme-style="display-7" class="mbr-fonts-style">Økologisk olivenolie m. smag, 0,25 L, 95 kr. stk:</h5>
+</div>
+<div data-for="order_hvid_troffel" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="order_hvid_troffel" class="form-control-label mbr-fonts-style">Hvid trøffel, notér antal stk:</label>
+<input type="number" name="order_hvid_troffel" max="100" min="0" step="1" data-form-field="order_hvid_troffel" mbr-theme-style="display-7" class="form-control" value>
+</div>
+<div data-for="order_chili" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="order_chili" class="form-control-label mbr-fonts-style">Chili, notér antal stk:</label>
+<input type="number" name="order_chili" max="100" min="0" step="1" data-form-field="order_chili" mbr-theme-style="display-7" class="form-control" value>
+</div>
+<div data-for="order_fennikel" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="order_fennikel" class="form-control-label mbr-fonts-style">Fennikel, notér antal stk:</label>
+<input type="number" name="order_fennikel" max="100" min="0" step="1" data-form-field="order_fennikel" mbr-theme-style="display-7" class="form-control" value>
+</div>
+<div data-for="order_krydderurter" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="order_krydderurter" class="form-control-label mbr-fonts-style">Krydderurter, notér antal stk:</label>
+<input type="number" name="order_krydderurter" max="100" min="0" step="1" data-form-field="order_krydderurter" mbr-theme-style="display-7" class="form-control" value>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<hr>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<h4 mbr-theme-style="display-5" class="mbr-fonts-style mbr-bold">Info:</h4>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<p mbr-theme-style="display-7" class="mbr-fonts-style">Felter med * skal udfyldes.</p>
+</div>
+<div data-for="name" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="name" class="form-control-label mbr-fonts-style">For- og efternavn *:</label>
+<input type="text" name="name" data-form-field="name" mbr-theme-style="display-7" required="required" class="form-control" value>
+</div>
+<div data-for="address" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="address" class="form-control-label mbr-fonts-style">Adresse *:</label>
+<input type="text" name="address" data-form-field="address" mbr-theme-style="display-7" required="required" class="form-control" value>
+</div>
+<div data-for="zip" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="zip" class="form-control-label mbr-fonts-style">Postnummer *:</label>
+<input type="number" name="zip" max min step="1" data-form-field="zip" mbr-theme-style="display-7" required="required" class="form-control" value>
+</div>
+<div data-for="city" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="city" class="form-control-label mbr-fonts-style">By *:</label>
+<input type="text" name="city" data-form-field="city" mbr-theme-style="display-7" required="required" class="form-control" value>
+</div>
+<div data-for="email1" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="email1" class="form-control-label mbr-fonts-style">E-mail *:</label>
+<input type="email" name="email1" data-form-field="email1" mbr-theme-style="display-7" required="required" class="form-control" value>
+</div>
+<div data-for="phone" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="phone" class="form-control-label mbr-fonts-style">Telefonnummer *:</label>
+<input type="tel" name="phone" pattern="*0-9" data-form-field="phone" mbr-theme-style="display-7" required="required" class="form-control" value>
+</div>
+<div data-for="radio" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<div class="form-control-label">
+<label mbr-text mbr-theme-style="display-7" for="radio" class="mbr-fonts-style">Levering *:</label>
+</div>
+<div class="form-check form-check-inline ms-2">
+<input type="radio" name="radio" data-form-field="radio" mbr-theme-style="display-7" class="form-check-input" value="Hjemme (70 kr.)" checked>
+<label mbr-text mbr-theme-style="display-7" class="form-check-label">Hjemme (70 kr.)</label>
+</div>
+<div class="form-check form-check-inline ms-2">
+<input type="radio" name="radio" data-form-field="radio" mbr-theme-style="display-7" class="form-check-input" value="Pakkeshop (50 kr.)">
+<label mbr-text mbr-theme-style="display-7" class="form-check-label">Pakkeshop (50 kr.)</label>
+</div>
+<div class="form-check form-check-inline ms-2">
+<input type="radio" name="radio" data-form-field="radio" mbr-theme-style="display-7" class="form-check-input" value="Afhentning Kbh S (0 kr.)">
+<label mbr-text mbr-theme-style="display-7" class="form-check-label">Afhentning Kbh S (0 kr.)</label>
+</div>
+</div>
+<div data-for="number7" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label mbr-text mbr-theme-style="display-7" for="number7" class="form-control-label mbr-fonts-style">Gaveindpakning (29 kr. pr. styk)? Skriv antal her:</label>
+<input type="number" name="number7" max="100" min="0" step="1" data-form-field="number7" mbr-theme-style="display-7" class="form-control" value>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 form-group">
+<div class="form-control-label">
+<label mbr-text mbr-theme-style="display-7" for="Ja tak!" class="mbr-fonts-style mbr-bold">Vil du have vores nyhedsbrev?</label>
+</div>
+<div data-for="Ja tak!" class="form-check ms-2">
+<input type="checkbox" value="Yes" name="Ja tak!" data-form-field="Ja tak!" mbr-theme-style="display-7" class="form-check-input">
+<label mbr-text for="Ja tak!" mbr-theme-style="display-7" class="form-check-label">Ja tak!</label>
+</div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<p mbr-theme-style="display-7" class="mbr-fonts-style">Har du kommentarer til ordren eller os? (Har du bestilt gaveindpakning, kan du skrive, hvilke olier der skal pakkes sammen. Ved tomt felt pakker vi alt sammen.)</p>
+</div>
+<div data-for="message" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<textarea name="message" data-form-field="message" mbr-theme-style="display-7" class="form-control"></textarea>
+</div>
+<div mbr-buttons="true" mbr-theme-style="display-7" data-toolbar="-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd" class="col-auto mbr-section-btn">
+<a data-toolbar="-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd" type="submit" class="w-100 w-100 w-100 w-100 w-100 w-100 w-100 w-100 w-100 btn btn-success">Bestil olier</a>
+</div>
+</div>
+</form><!--Formbuilder Form-->
+</div>
+        </div>
+    </div>
+</section>
+

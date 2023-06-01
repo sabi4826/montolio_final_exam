@@ -1,0 +1,446 @@
+/* TASTE MONT.OLIO HERO */
+& when not (@fullScreen) {
+  padding-top: (@paddingTop * 1rem);
+  padding-bottom: (@paddingBottom * 1rem);
+}
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+  display: none;
+}
+.mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  & when (@bg-type = "video") {
+    background-image: url(@fallBackImage);
+  }
+}
+& when (@fullWidth) {
+  .text-wrapper {
+    padding: 1rem;
+  }
+}
+@media (max-width: 991px) {
+  .image-wrapper {
+    margin-bottom: 1rem;
+  }
+}
+.row {
+  flex-direction: row-reverse;
+}
+img {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .text-wrapper {
+    padding: 2rem;
+  }
+}
+.mbr-text {
+  color: #000000;
+}
+.mbr-section-title {
+  color: #000000;
+}
+
+/* CALENDAR SECTION */
+& when not (@fullScreen) {
+  padding-top: (@paddingTop * 1rem);
+  padding-bottom: (@paddingBottom * 1rem);
+}
+overflow: hidden;
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+  display: none;
+}
+.mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  & when (@bg-type = "video") {
+    background-image: url(@fallBackImage);
+  }
+}
+& when (@fullWidth) {
+  .container-fluid {
+    padding: 0 60px;
+    @media (max-width: 992px) {
+      padding: 0 30px;
+    }
+    .row {
+      padding: 0;
+    }
+  }
+}
+.container {
+  @media (max-width: 992px) {
+    padding: 0 30px;
+  }
+}
+.row {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -16rem;
+    left: -6rem;
+    transform: rotate(-14deg);
+    display: block;
+    width: 649px;
+    height: 400px;
+    border-radius: 150px;
+    border: 2px solid @decor;
+    & when (@reverseContent) {
+      left: auto;
+      right: -15rem;
+      transform: rotate(45deg);
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+.title-wrapper {
+  @media (max-width: 992px) {
+    margin-bottom: 32px;
+  }
+  .mbr-section-title {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding-left: 14px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: @dot;
+    }
+  }
+}
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0 85px 0;
+  border-top: 1px solid @border;
+  position: relative;
+  @media (max-width: 992px) {
+    display: block;
+  }
+  .mbr-date {
+    margin-bottom: 0;
+    min-width: 106px;
+    @media (max-width: 992px) {
+      margin-bottom: 32px;
+    }
+    span {
+      display: block;
+      font-size: 20%;
+    }
+  }
+  .mbr-card-title {
+    margin-bottom: 16px;
+  }
+  .mbr-loc {
+    margin-bottom: 0;
+  }
+  .mbr-section-btn {
+    min-width: 192px;
+    @media (max-width: 992px) {
+      margin-top: 72px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 16px;
+    }
+  }
+}
+.mbr-section-title {
+  color: #232323;
+}
+.mbr-date {
+  color: #232323;
+}
+.mbr-card-title {
+  color: #232323;
+}
+.mbr-loc {
+  color: #232323;
+}
+
+/* PHOTO SECTION */
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+  display: none;
+}
+.mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  & when (@bg-type = "video") {
+    background-image: url(@fallBackImage);
+  }
+}
+.row {
+  align-items: stretch;
+  justify-content: center;
+  .img-item {
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      min-height: 450px;
+      border-radius: 2rem;
+      @media (max-width: 767px) {
+        min-height: 300px;
+      }
+    }
+  }
+}
+
+/* FOLLOW US ON IG SECTION */
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+  display: none;
+}
+.mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  & when (@bg-type = "video") {
+    background-image: url(@fallBackImage);
+  }
+}
+.bg-facebook when (@facebook) {
+  background: #1778f2;
+  color: contrast(#1778f2);
+  &:hover {
+    background: darken(#1778f2, 10);
+  }
+}
+.bg-twitter when (@twitter) {
+  background: #1da1f2;
+  color: contrast(#1da1f2);
+  &:hover {
+    background: darken(#1da1f2, 10);
+  }
+}
+.bg-pinterest when (@pinterest) {
+  background: #e60023;
+  color: contrast(#e60023);
+  &:hover {
+    background: darken(#e60023, 10);
+  }
+}
+.bg-instagram when (@instagram) {
+  background: #faac1b;
+  color: contrast(#9c4909);
+  &:hover {
+    background: darken(#9c4909, 5);
+  }
+}
+.bg-slack when (@slack) {
+  background: #4a154b;
+  color: contrast(#4a154b);
+  &:hover {
+    background: darken(#4a154b, 10);
+  }
+}
+.bg-linkedin when (@linkedin) {
+  background: #0077b5;
+  color: contrast(#0077b5);
+  &:hover {
+    background: darken(#0077b5, 10);
+  }
+}
+.bg-behance when (@behance) {
+  background: #0056ff;
+  color: contrast(#0056ff);
+  &:hover {
+    background: darken(#0056ff, 10);
+  }
+}
+.bg-dribbble when (@dribbble) {
+  background: #ea4c89;
+  color: contrast(#ea4c89);
+  &:hover {
+    background: darken(#ea4c89, 10);
+  }
+}
+.bg-tiktok when (@tiktok) {
+  background: #000000;
+  color: contrast(#000000);
+  &:hover {
+    background: darken(#000000, 10);
+  }
+}
+.bg-youtube when (@youtube) {
+  background: #ff0000;
+  color: contrast(#ff0000);
+  &:hover {
+    background: darken(#ff0000, 10);
+  }
+}
+.bg-twitch when (@twitch) {
+  background: #9146ff;
+  color: contrast(#9146ff);
+  &:hover {
+    background: darken(#9146ff, 10);
+  }
+}
+.iconfont-wrapper {
+  display: inline-block;
+  font-size: 32px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+& when (@squareIcons) {
+  .iconfont-wrapper {
+    border-radius: 0 !important;
+  }
+}
+[class^="socicon-"]:before,
+[class*=" socicon-"]:before {
+  line-height: 55px;
+  padding: 0.6rem;
+}
+.mbr-section-title,
+.social-list {
+  color: #ecddc3;
+}
+
+/* BECOME AN ITALIEN CHEF SECTION */
+& when not (@fullScreen) {
+  padding-top: (@paddingTop * 1rem);
+  padding-bottom: (@paddingBottom * 1rem);
+}
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+  display: none;
+}
+.mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  & when (@bg-type = "video") {
+    background-image: url(@fallBackImage);
+  }
+}
+& when (@fullWidth) {
+  .text-wrapper {
+    padding: 1rem;
+  }
+}
+figcaption {
+  font-style: italic;
+  text-align: right;
+}
+.btn {
+  padding: 1rem 1.5rem;
+}
+@media (max-width: 991px) {
+  .image-wrapper {
+    margin-bottom: 1rem;
+  }
+}
+img {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .text-wrapper {
+    padding: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  padding-top: (@paddingTop * 0.5rem);
+  padding-bottom: (@paddingBottom * 0.5rem);
+}
+.mbr-description {
+  text-align: left;
+}
+
+/* WHAT IS GOOD OIL SECTION */
+& when not (@fullScreen) {
+  padding-top: (@paddingTop * 15px);
+  padding-bottom: (@paddingBottom * 15px);
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+H1 {
+  color: #e0d9bc;
+}
+.mbr-text {
+  color: #e0d9bc;
+}
+.mbr-section-btn {
+  .btn {
+    color: #232323 !important;
+  }
+}

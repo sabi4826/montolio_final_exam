@@ -1,0 +1,516 @@
+/* ORGANIC OLIVE OIL SECTION */
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+  & when (@overlay) {
+    .mbr-overlay {
+      background: @overlayColor;
+      opacity: @overlayOpacity;
+    }
+  }
+}
+img,
+.item-img {
+  width: 100%;
+  & when (@autoSize) {
+    height: 100%;
+    object-fit: cover;
+    & when (@showCardTitle) {
+      height: (@imageHeight * 100px);
+      object-fit: cover;
+    }
+    & when (@showCardSubtitle) {
+      height: (@imageHeight * 100px);
+      object-fit: cover;
+    }
+    & when (@showText) {
+      height: (@imageHeight * 100px);
+      object-fit: cover;
+    }
+    & when (@showButtons) {
+      height: (@imageHeight * 100px);
+      object-fit: cover;
+    }
+  }
+}
+.item:focus,
+span:focus {
+  outline: none;
+}
+.item {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+}
+& when not (@spacing) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .item {
+    padding: 0;
+    margin: 0;
+  }
+}
+.item-wrapper {
+  position: relative;
+  border-radius: 15px;
+  margin: 0 auto;
+  background: @cardsBg;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  & when not (@addBg) {
+    background: transparent;
+  }
+  @media (min-width: 992px) {
+    .item-content {
+      padding: 1.7rem 2rem 0;
+    }
+    .item-footer {
+      padding: 0 2rem 1.7rem;
+    }
+  }
+  @media (max-width: 991px) {
+    .item-content {
+      padding: 1rem 1rem 0;
+    }
+    .item-footer {
+      padding: 0 1rem 1rem;
+    }
+  }
+}
+.item-title {
+  text-align: left;
+  & when not (@showCardSubtitle) {
+    margin-bottom: 1rem;
+  }
+  color: #e6ddc3;
+}
+.item-subtitle {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.mbr-text {
+  text-align: left;
+}
+.item-footer {
+  margin-top: 14px;
+}
+.mbr-amount {
+  margin-bottom: 1rem;
+  text-align: left;
+  & when not (@showPrice) {
+    margin-bottom: 1rem;
+  }
+}
+.mbr-price {
+  color: #33d5ad;
+  text-align: left;
+}
+.item-btn {
+  min-width: 150px;
+  min-height: 53px;
+  margin-left: 0;
+}
+.mbr-section-btn {
+  margin-top: 30px;
+  & when (@showButtons) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.mbr-section-title {
+  color: #e6ddc3;
+  text-align: center;
+}
+.mbr-text,
+.mbr-section-btn {
+  color: #e0d9bc;
+}
+.mbr-amount,
+.mbr-section-btn {
+  color: #e0d9bc;
+}
+.mbr-price,
+.mbr-section-btn {
+  color: #e6ddc3;
+}
+.mbr-section-subtitle {
+  color: #e1dabe;
+}
+
+/* OLIVE OIL WITH FLAVOURS SECTION */
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+  & when (@overlay) {
+    .mbr-overlay {
+      background: @overlayColor;
+      opacity: @overlayOpacity;
+    }
+  }
+}
+img,
+.item-img {
+  width: 100%;
+  & when (@autoSize) {
+    height: 100%;
+    object-fit: cover;
+    & when (@showCardTitle) {
+      height: (@imageHeight * 100px);
+      object-fit: cover;
+    }
+    & when (@showCardSubtitle) {
+      height: (@imageHeight * 100px);
+      object-fit: cover;
+    }
+    & when (@showText) {
+      height: (@imageHeight * 100px);
+      object-fit: cover;
+    }
+    & when (@showButtons) {
+      height: (@imageHeight * 100px);
+      object-fit: cover;
+    }
+  }
+}
+.item:focus,
+span:focus {
+  outline: none;
+}
+.item {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+}
+& when not (@spacing) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .item {
+    padding: 0;
+    margin: 0;
+  }
+}
+.item-wrapper {
+  position: relative;
+  border-radius: 15px;
+  margin: 0 auto;
+  background: @cardsBg;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  & when not (@addBg) {
+    background: transparent;
+  }
+  @media (min-width: 992px) {
+    .item-content {
+      padding: 1.7rem 2rem 0;
+    }
+    .item-footer {
+      padding: 0 2rem 1.7rem;
+    }
+  }
+  @media (max-width: 991px) {
+    .item-content {
+      padding: 1rem 1rem 0;
+    }
+    .item-footer {
+      padding: 0 1rem 1rem;
+    }
+  }
+}
+.item-title {
+  text-align: left;
+  & when not (@showCardSubtitle) {
+    margin-bottom: 1rem;
+  }
+  color: #e6ddc3;
+}
+.item-subtitle {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.mbr-text {
+  text-align: left;
+}
+.item-footer {
+  margin-top: 14px;
+}
+.mbr-amount {
+  margin-bottom: 1rem;
+  text-align: left;
+  & when not (@showPrice) {
+    margin-bottom: 1rem;
+  }
+}
+.mbr-price {
+  color: #33d5ad;
+  text-align: left;
+}
+.item-btn {
+  min-width: 150px;
+  min-height: 53px;
+  margin-left: 0;
+}
+.mbr-section-btn {
+  margin-top: 30px;
+  & when (@showButtons) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.mbr-section-title {
+  color: #e6ddc3;
+  text-align: center;
+}
+.mbr-text,
+.mbr-section-btn {
+  color: #e0d9bc;
+}
+.mbr-amount,
+.mbr-section-btn {
+  color: #e0d9bc;
+}
+.mbr-price,
+.mbr-section-btn {
+  color: #e6ddc3;
+}
+
+/* OUR OIL IS FROM SECTION */
+& when not (@fullScreen) {
+  padding-top: (@paddingTop * 1rem);
+  padding-bottom: (@paddingBottom * 1rem);
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@fullWidth) {
+  & when (@imageFullWidth) {
+    .container-fluid {
+      padding: 0;
+    }
+    .text-wrapper {
+      padding: 0 4rem;
+      @media (max-width: 768px) {
+        padding: 0 2rem;
+      }
+    }
+  }
+}
+.image-wrapper {
+  height: 90%;
+  margin-top: 80px;
+  img {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 10rem;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+.btn {
+  padding: 1rem 1.5rem;
+}
+.mbr-text,
+.mbr-section-title,
+.mbr-section-btn {
+  color: #e6ddc3;
+}
+@media (min-width: 992px) {
+  .text-wrapper {
+    padding: 5rem 5rem 0 0rem;
+    & when (@fullWidth) {
+      padding: 10rem 5rem 0 0rem;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  padding-top: 0;
+  padding-bottom: 0;
+  .image-wrapper {
+    height: 90%;
+    margin-top: 0;
+  }
+  img {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  padding: 0 2rem;
+  .mbr-section-title {
+    margin-top: 0;
+  }
+  img {
+    margin-bottom: 4rem;
+    margin-top: 0;
+  }
+}
+
+/* FREE GIFT WITH PURCHASE SECTION */
+padding-top: (@paddingTop * 1rem);
+padding-bottom: (@paddingBottom * 1rem);
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+  display: none;
+}
+.mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  & when (@bg-type = "video") {
+    background-image: url(@fallBackImage);
+  }
+}
+.mbr-section-title {
+  color: #ecddc3;
+  text-align: left;
+}
+.mbr-text,
+.link {
+  color: #ecddc3;
+}
+
+/* ORDER OIL FORM SECTION */
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+.mbr-overlay {
+  background-color: @overlayColor;
+  opacity: @overlayOpacity;
+}
+& when (@bg-type = "image") {
+  background-image: url(@bg-value);
+}
+& when (@bg-type = "color") {
+  background-color: @bg-value;
+}
+& when (@customStyle) {
+  .form-control,
+  .field-input {
+    padding: 0.5rem;
+    background-color: @fieldColor;
+    border-color: @borderColor;
+    color: @formText;
+    transition: 0.4s;
+    box-shadow: none;
+    outline: none;
+    &::-webkit-input-placeholder,
+    &::-webkit-input-placeholder {
+      color: @formPlaceholder;
+    }
+    &:-moz-placeholder,
+    &:-moz-placeholder {
+      color: @formPlaceholder;
+    }
+    &:hover,
+    &:focus {
+      background-color: @fieldHover;
+      border-color: @borderHover;
+      color: @formFocusText;
+      box-shadow: none;
+      outline: none;
+      &::-webkit-input-placeholder,
+      &::-webkit-input-placeholder {
+        color: @formFocusPlaceholder;
+      }
+      &:-moz-placeholder,
+      &:-moz-placeholder {
+        color: @formFocusPlaceholder;
+      }
+    }
+  }
+  .jq-number__spin:hover,
+  .jq-number__spin:focus {
+    background-color: @fieldHover;
+    border-color: @borderHover;
+    color: contrast(@formText, #000000, #ffffff, 30%);
+    box-shadow: none;
+    outline: none;
+  }
+  .jq-number__spin {
+    background-color: @fieldColor;
+    border-color: @borderColor;
+    color: @formText;
+    transition: 0.4s;
+    box-shadow: none;
+    outline: none;
+  }
+  .jq-selectbox li,
+  .jq-selectbox li {
+    background-color: @fieldColor;
+    color: contrast(@fieldColor, #000000, #ffffff, 30%);
+  }
+  .jq-selectbox li:hover,
+  .jq-selectbox li.selected {
+    background-color: @fieldHover;
+    color: contrast(@fieldHover, #000000, #ffffff, 30%);
+  }
+  .jq-selectbox:hover .jq-selectbox__trigger-arrow,
+  .jq-number__spin.minus:hover:after,
+  .jq-number__spin.plus:hover:after {
+    border-top-color: @fieldColor;
+    border-bottom-color: @fieldColor;
+  }
+  .jq-selectbox .jq-selectbox__trigger-arrow,
+  .jq-number__spin.minus:after,
+  .jq-number__spin.plus:after {
+    border-top-color: @fieldHover;
+    border-bottom-color: @fieldHover;
+  }
+}
+& when (@customStyle), (@disableElements) {
+  input::-webkit-clear-button {
+    display: none;
+  }
+  input::-webkit-inner-spin-button {
+    display: none;
+  }
+  input::-webkit-outer-spin-button {
+    display: none;
+  }
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+form {
+  .btn {
+    padding: 1rem 1.5rem;
+    color: #e0d9bc;
+    margin-top: 1.5rem;
+  }
+}
+.form-check {
+  margin-bottom: 4px;
+}
+h4,
+h5,
+p {
+  margin-bottom: 5px;
+}
+.extra-margin-top {
+  margin-top: 8px;
+}

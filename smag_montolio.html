@@ -1,0 +1,418 @@
+<!-- TASTE MONT.OLIO HERO -->
+<section data-bs-version="5.1" class="image2" group="Images & Videos" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{'mbr-fullscreen': fullScreen,
+                    'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="6" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="6" condition="fullScreen == false">
+        <input type="range" name="textWidth" title="Image" min="4" max="8" step="1" value="6">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Description" name="showDescription">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-2.png" parallax selected>
+            <input type="color" title="Color" value="#ffffff">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background13.jpg" name="fallBackImage" condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.5" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth}">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-{{textWidth}}">
+                <div class="image-wrapper">
+                    <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/25-2.png" alt="Mont.Olio italiensk olivenolie">
+                    <p class="mbr-description mbr-fonts-style mt-2 align-center" mbr-theme-style="display-4" mbr-if="showDescription" data-app-selector=".mbr-description">
+                        Image Description</p>
+                </div>
+            </div>
+            <div class="col-12" mbr-class="{'col-lg' : !fullWidth, 'col-lg-4' : fullWidth &amp;&amp; textWidth >= 6, 'col-lg-6' : fullWidth &amp;&amp; textWidth <= 5}">
+                <div class="text-wrapper">
+                    <h3 class="mbr-section-title mbr-fonts-style mb-3" data-app-selector=".mbr-section-title" mbr-theme-style="display-2" mbr-if="showTitle">
+                        <b>Mød Mont.Olio nær dig</b></h3>
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text">Vi elsker smagen af Italien, og vi elsker at dele vores entusiasme for gode, sunde råvarer. Derfor er vi jævnligt ude på messer og markeder og møde andre madglade danskere. Her kan man smage vores seks forskellige olivenolier og få en snak med os om alt fra vores koncept, olivenhøst, italiensk mad og passionen for god mad.&nbsp;<br><br>Find vores næste events i kalenderen nedenfor - og kom ud og mød os, og smag vores økologiske ekstra jomfruolivenolier, der er høstet i Toscana. Det er som at få en mundfuld af Italien!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CALENDAR SECTION -->
+<section data-bs-version="5.1" class="content5 careerm5" group="List" mbr-class="{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="2" condition="fullScreen == false">
+        <input type="checkbox" title="Reverse" name="reverseContent">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="color" title="Dot Color" value="#000000" name="dot" condition="showTitle">
+        <input type="color" title="Decoration Color" value="#62ad2b" name="decor">
+        <header>Cards</header>
+        <select title="Amount" name="cards">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+        </select>
+        <input type="checkbox" title="Date" name="showDate" checked>
+        <input type="checkbox" title="Card Title" name="showCardTitle" checked>
+        <input type="checkbox" title="Location" name="showLoc" checked>
+        <input type="checkbox" title="Buttons" name="showButtons">
+        <input type="color" title="Border Color" value="#000000" name="border">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/AppData/Local/Mobirise.com/Mobirise/fieboegvad_0040gmail_002ecom/addons/careerm5/components/_images/background1.jpg" parallax>
+            <input type="color" title="Color" value="#e6ddc3" selected>
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="file:///C:/Users/sabin/AppData/Local/Mobirise.com/Mobirise/fieboegvad_0040gmail_002ecom/addons/careerm5/components/_images/background1.jpg" name="fallBackImage" condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#000000" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.3" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row" mbr-class="{'flex-row-reverse' : reverseContent}">
+            <div class="col-12 col-lg-4">
+                <div class="title-wrapper">
+                    <h3 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle" data-app-selector=".mbr-section-title, .title-wrapper">&nbsp;<b>Mød os her:</b></h3>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="card-wrapper">
+                    <p class="mbr-date mbr-fonts-style" data-app-selector=".mbr-date" mbr-theme-style="display-1" mbr-if="showDate">21.
+                        <span>november, 2023</span>
+                    </p>
+                    <div class="text-wrapper">
+                        <h4 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showCardTitle" data-app-selector=".mbr-card-title">
+                            Banegårdens Madmarked</h4>
+                        <p class="mbr-loc mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showLoc" data-app-selector=".mbr-loc">Otto Busse Vej 45, 2450 Kbh SV</p>
+                    </div>
+                    <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons"><a class="btn btn-primary-outline" href="https://mobiri.se" data-app-placeholder="Type Text">
+                            <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
+                            See date
+                        </a></div>
+                </div>
+                <div class="card-wrapper" mbr-if="cards > 1">
+                    <p class="mbr-date mbr-fonts-style" data-app-selector=".mbr-date" mbr-theme-style="display-1" mbr-if="showDate">
+                        14.
+                        <span>Dec, 2023</span>
+                    </p>
+                    <div class="text-wrapper">
+                        <h4 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showCardTitle" data-app-selector=".mbr-card-title">
+                            Torvehallernes Madmesse</h4>
+                        <p class="mbr-loc mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showLoc" data-app-selector=".mbr-loc">Frederiksborggade 21, 1360 Kbh K</p>
+                    </div>
+                    <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons">
+                        <a class="btn btn-primary-outline" href="https://mobiri.se" data-app-placeholder="Type Text">
+                            <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
+                            See date
+                        </a>
+                    </div>
+                </div>
+                <div class="card-wrapper" mbr-if="cards > 2">
+                    <p class="mbr-date mbr-fonts-style" data-app-selector=".mbr-date" mbr-theme-style="display-1" mbr-if="showDate">17.
+                        <span>Dec, 2023</span>
+                    </p>
+                    <div class="text-wrapper">
+                        <h4 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showCardTitle" data-app-selector=".mbr-card-title">
+                            Aarhus Julemarked &amp; Mad</h4>
+                        <p class="mbr-loc mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showLoc" data-app-selector=".mbr-loc">
+                            Skovgaardsgade 3, 8000 Aarhus C</p>
+                    </div>
+                    <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons">
+                        <a class="btn btn-primary-outline" href="https://mobiri.se" data-app-placeholder="Type Text">
+                            <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
+                            See date
+                        </a>
+                    </div>
+                </div>
+                <div class="card-wrapper" mbr-if="cards > 3">
+                    <p class="mbr-date mbr-fonts-style" data-app-selector=".mbr-date" mbr-theme-style="display-1" mbr-if="showDate">
+                        25.
+                        <span>Dec, 2030</span>
+                    </p>
+                    <div class="text-wrapper">
+                        <h4 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showCardTitle" data-app-selector=".mbr-card-title">
+                            Similique sunt velit
+                        </h4>
+                        <p class="mbr-loc mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showLoc" data-app-selector=".mbr-loc">
+                            71 CHRYSTIE ST NEW YORK NY, USA
+                        </p>
+                    </div>
+                    <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons">
+                        <a class="btn btn-primary-outline" href="https://mobiri.se" data-app-placeholder="Type Text">
+                            <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
+                            See date
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PHOTO SECTION -->
+<section data-bs-version="5.1" class="image2" group="Images & Videos" mbr-class="{'mbr-parallax-background':bg.parallax}" data-bg-video="{{bg.type == 'video' && bg.value.url}}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="8">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="7">
+        <input type="range" inline title="Width" name="contentWidth" min="6" max="12" value="12" step="1">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Description" name="showDescription">
+        <input type="range" inline title="Images" name="item" min="1" max="3" value="3" step="1">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/AppData/Local/Mobirise.com/Mobirise/fieboegvad_0040gmail_002ecom/addons/investm5/components/_images/background1.jpg">
+            <input type="color" title="Color" value="#9e6227" selected>
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="file:///C:/Users/sabin/AppData/Local/Mobirise.com/Mobirise/fieboegvad_0040gmail_002ecom/addons/investm5/components/_images/background1.jpg" name="fallBackImage" condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.4" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12 col-md-{{contentWidth}}">
+                <div class="row">
+                    <div class="col-12 col-lg-4" mbr-if="item > 2">
+                        <div class="img-item mb-3">
+                            <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/25.png" alt="Mont.Olio billede af oliven">
+                            <p class="mbr-fonts-style align-center mt-2" mbr-theme-style="display-7" mbr-if="showDescription">Text</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4" mbr-if="item > 1">
+                        <div class="img-item mb-3">
+                            <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/61-2.png" alt="Mont.Olio billede af tomater og mozzarella">
+                            <p class="mbr-fonts-style align-center mt-2" mbr-theme-style="display-7" mbr-if="showDescription">Text</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="img-item mb-3">
+                            <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/63.png" alt="Mont.Olio billede af pastaret">
+                            <p class="mbr-fonts-style align-center mt-2" mbr-theme-style="display-7" mbr-if="showDescription">Text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOLLOW US ON IG SECTION -->
+<section data-bs-version="5.1" class="share3" group="Social" data-bg-video="{{bg.type == 'video' && bg.value.url}}" plugins="Socicon">
+    
+    <mbr-parameters>
+   <!-- Block parameters controls (Blue "Gear" panel) -->
+       <header>Size</header>
+       <input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="5">
+       <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="5">
+        <header>Show/Hide</header>
+       <input type="checkbox" title="Show Title" name="showTitle" checked>
+       <input type="checkbox" title="Square Icons" name="squareIcons">
+       <input type="checkbox" title="Facebook" name="facebook">
+       <input type="checkbox" title="Twitter" name="twitter">
+       <input type="checkbox" title="Instagram" name="instagram" checked>
+       <input type="checkbox" title="Pinterest" name="pinterest">
+       <input type="checkbox" title="Slack" name="slack">
+       <input type="checkbox" title="Linkedin" name="linkedin">
+       <input type="checkbox" title="Behance" name="behance">
+       <input type="checkbox" title="Dribbble" name="dribbble">
+       <input type="checkbox" title="Tiktok" name="tiktok">
+       <input type="checkbox" title="Youtube" name="youtube">
+       <input type="checkbox" title="Twitch" name="twitch">
+       <header>Background</header>
+       <fieldset type="background" name="bg" parallax>
+           <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/img-2880.jpeg">
+           <input type="color" title="Color" value="#0e6b38" selected>
+           <input type="video" title="Video" value="https://vimeo.com/428046504">
+       </fieldset>
+       <header condition="bg.type === 'video'">Fallback Image</header>
+       <input type="image" title="Fallback Image" value="../_images/background13.jpg" name="fallBackImage" condition="bg.type === 'video'">
+       <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+       <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay && bg.type !== 'color'">
+       <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.5" condition="overlay && bg.type !== 'color'">
+   </mbr-parameters>
+   
+   <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+   <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+   </div>
+
+   <div class="container">
+       <div class="media-container-row">
+           <div class="col-12">
+               <h3 class="mbr-section-title align-center mb-3 mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle" data-app-selector=".mbr-section-title, .social-list">
+                   <b>Følg os på Instagram!</b></h3>
+               <div class="social-list align-center">
+                  
+                   <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" data-app-placeholder="Type Text" href="https://mobiri.se" mbr-if="facebook">
+                           <span mbr-icon class="socicon-facebook socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-twitter m-2" href="https://mobiri.se" target="_blank" mbr-if="twitter">
+                           <span mbr-icon class="socicon-twitter socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-instagram m-2" href="https://www.instagram.com/mont.olio/" target="_blank" mbr-if="instagram">
+                           <span mbr-icon class="socicon-instagram socicon" style="color: rgb(236, 221, 195); fill: rgb(236, 221, 195);"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-pinterest m-2" href="https://mobiri.se" target="_blank" mbr-if="pinterest">
+                           <span mbr-icon class="socicon-pinterest socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-slack m-2" href="https://mobiri.se" target="_blank" mbr-if="slack">
+                           <span mbr-icon class="socicon-slack socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-linkedin m-2" href="https://mobiri.se" target="_blank" mbr-if="linkedin">
+                           <span mbr-icon class="socicon-linkedin socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-behance m-2" href="https://mobiri.se" target="_blank" mbr-if="behance">
+                           <span mbr-icon class="socicon-behance socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-dribbble m-2" href="https://mobiri.se" target="_blank" mbr-if="dribbble">
+                           <span mbr-icon class="socicon-dribbble socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-tiktok m-2" href="https://mobiri.se" target="_blank" mbr-if="tiktok">
+                           <span mbr-icon class="socicon-tiktok socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-youtube m-2" href="https://mobiri.se" target="_blank" mbr-if="youtube">
+                           <span mbr-icon class="socicon-youtube socicon"></span>
+                       </a>
+                       <a class="iconfont-wrapper bg-twitch m-2" href="https://mobiri.se" target="_blank" mbr-if="twitch">
+                           <span mbr-icon class="socicon-twitch socicon"></span>
+                       </a>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+<!-- BECOME AN ITALIEN CHEF SECTION -->
+<section data-bs-version="5.1" class="image1" group="Images & Videos" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{'mbr-fullscreen': fullScreen,
+                    'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="7" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="7" condition="fullScreen == false">
+        <input type="range" name="textWidth" title="Image" min="4" max="8" step="1" value="6">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Description" name="showDescription" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/baggrund-5.png" selected>
+            <input type="color" title="Color" value="#ffffff">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background13.jpg" name="fallBackImage" condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#e6ddc3" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.5" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth}">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-{{textWidth}}">
+                <div class="image-wrapper">
+                    <img src="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/63-1.png" alt="Mont.Olio frisk olivenolie">
+                    <figcaption>
+                    Vi elsker italiensk mad her hos Mont.Olio! Stockfoto.</figcaption>
+                </div>
+            </div>
+            <div class="col-12" mbr-class="{'col-lg' : !fullWidth, 'col-lg-4' : fullWidth &amp;&amp; textWidth >= 6, 'col-lg-6' : fullWidth &amp;&amp; textWidth <= 5}">
+                <div class="text-wrapper">
+                    <h3 class="mbr-section-title mbr-fonts-style mb-3" data-app-selector=".mbr-section-title" mbr-theme-style="display-2" mbr-if="showTitle"><b>Bliv italiensk kok i dit eget køkken</b></h3>
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text">Hvorfor smager maden altid meget bedre på ferien i Italien? Stemningen, det gode vejr og kvalitetstid med familien har selvfølgelig noget at sige, men det har råvarerne godt nok også. Måske har du prøvet at genskabe en lækker pastaret, du fik på din ferie, men det bliver bare ikke det samme. 
+<br>
+<br>Når du bruger olivenolie, der er høstet frisk fra bonden i din madlavning, er det altså virkelig en anden smagsoplevelse. Præcis som den i Italien.<br><br></p>
+                </div>
+                <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons" data-toolbar="-mbrBtnMove"><a class="btn btn-md btn-success" href="https://www.instagram.com/mont.olio/" data-app-placeholder="Type Text" target="_blank">Bliv inspireret</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT IS GOOD OIL SECTION -->
+<section data-bs-version="5.1" class="header1 woodm4_header1" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <!-- Block parameters controls (Blue "Gear" panel) -->
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="4" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="5" condition="fullScreen == false">
+        <input type="checkbox" title="Show Arrow" name="showArrow">
+        <input type="checkbox" title="Show Title" name="showTitle" checked>
+        <input type="checkbox" title="Show Subtitle" name="showSubTitle">
+        <input type="checkbox" title="Show Text" name="showText" checked>
+        <input type="checkbox" title="Show Buttons" name="showButtons" checked>
+
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="file:///C:/Users/sabin/OneDrive/Desktop/14_final_exam/Eksport%20mappe/assets/images/53-1.png" selected parallax>
+            <input type="color" title="Background Color" value="#073B4C">
+            <input type="video" title="Background Video" value="https://www.youtube.com/watch?v=36YgDDJ7XSc">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.5" condition="overlay && bg.type !== 'color'">
+        <!-- End block parameters -->
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+
+    <div class="container">
+        <div class="row justify-content-md-end">
+            <div class="mbr-white col-lg-6 col-md-12">
+                <h1 class="mbr-section-title align-left mbr-bold pb-4 mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle">
+
+                    <div>
+                    </div>
+                    <div>Hvad er god velsmagende kvalitets olivenolie?&nbsp;&nbsp;</div>
+                </h1>
+                <h3 class="mbr-section-subtitle align-left mbr-light pb-4 mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showSubTitle">
+                
+                </h3>
+                <p class="mbr-text pb-4 align-left mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn">Du har nok prøvet at stå nede i supermarkedet og vælge en olivenolie. <br>Skal den være jomfru, ekstra jomfru, koldpresset? Hvilken er den bedste?&nbsp;<br><br>Det er svært at finde rundt i, og måske ender du med en økologisk ekstra jomfru olivenolie, for så er det jo den bedste kvalitet... Eller er det?&nbsp;&nbsp;<br><br>De lokale Italienere ved udmærket, at det ikke kun er kvalitetsniveaet, men også friskheden, som får deres olivenolie til at smage fantastisk. <br><br>De ved, at oliven er frugter, og olie lavet på oliven smager bedst, når den er god og frisk. De skaffer sig en portion frisk fra høsten og laver dejlig smagfuld italiensk mad hele året&nbsp;indtil næste høst.<br></p>
+                <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons" data-toolbar="-mbrBtnMove"><a class="btn btn-md btn-warning btn-no-darken-on-white" href="produkter.html" data-app-placeholder="Type Text">Se vores produkter</a></div>
+            </div>
+        </div>
+    </div>
+    <div mbr-if="showArrow" class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
+</section>
